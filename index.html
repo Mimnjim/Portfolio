@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/global.css">
+    <title>Portfolio - TE Jimmy</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jockey+One&family=Jost:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="content-header">
+            <div class="motif">+</div>
+
+            <div class="title">
+                <h1>Portfolio</h1>
+                <span class="line"></span>
+            </div>
+
+            <div class="subtitle">
+                <h2 class="job">Développeur web</h2>
+                <h2 class="name">
+                    <span class="circle"></span>
+                    TE Jimmy
+                    <span class="circle"></span>
+                </h2>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <a href="index.html" class="nav-logo">TE JIMMY</a>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="#about-me">À propos</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="interests-jobs">
+            <div class="elements reveal">
+                <h1>UI Design</h1>
+                <h1>UX Design</h1>
+            </div>
+            <div class="elements reveal">
+                <h1>Design</h1>
+                <h1>Monteur</h1>
+            </div>
+            <h1 class="main-job reveal">Développeur web</h1>
+            <div class="elements reveal">
+                <h1>Front-end</h1>
+                <h1>Back-end</h1>
+            </div>
+            <div class="elements reveal">
+                <h1>Communication</h1>
+                <h1>Accessibilité</h1>
+            </div>
+        </section>
+
+        <section class="about-me reveal" id="about-me">
+            <div class="about-wrapper">
+                <div class="about-text">
+                    <h2>À propos<span>.</span></h2>
+                    <p>
+                        Passionné par le développement web et le design, je crée des expériences
+                        simples, accessibles et esthétiques. J’aime comprendre les usages,
+                        structurer proprement et donner vie aux interfaces par le mouvement.
+                    </p>
+                </div>
+
+                <div class="about-visual">
+                    <img src="images/logo-mmi.png" alt="Logo MMI">
+                </div>
+            </div>
+        </section>
+        
+        <!-- <section class="projects reveal">
+            <div class="projects-header" style="text-align: right;">
+                <h2>Projets<span>.</span></h2>
+                <p>Une sélection de travaux mêlant développement, design et réflexion UX.</p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card-wrapper">
+                    <article class="project-card">
+                        <div class="project-media">
+                            <img src="images/Projets/SAE_203_-_WebInventory.png" alt="WebInventory">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-tag">Web</span>
+                            <h3>WebInventory</h3>
+                            <p>Application de gestion d’inventaire pour les petites entreprises, avec suivi des stocks et alertes automatiques.</p>
+                            <button class="project-btn">Voir le projet</button>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="project-card-wrapper">
+                    <article class="project-card">
+                        <div class="project-media">
+                            <img src="images/Projets/SAE_105_-_Echo_Music.png" alt="Echo Music">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-tag">Web</span>
+                            <h3>Echo Music</h3>
+                            <p>Plateforme musicale avec playlist personnalisées, extraits audio et recommandations basées sur l’écoute.</p>
+                            <button class="project-btn">Voir le projet</button>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="project-card-wrapper">
+                    <article class="project-card">
+                        <div class="project-media">
+                            <img src="images/Projets/SAE_303_-_Staytistics.png" alt="Staytistics">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-tag">Web</span>
+                            <h3>Staytistics</h3>
+                            <p>Site web permettant de suivre l’évolution des écoutes des albums des membres de Stray Kids, avec statistiques interactives et visualisations dynamiques.</p>
+                            <button class="project-btn">Voir le projet</button>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="project-card-wrapper">
+                    <article class="project-card">
+                        <div class="project-media">
+                            <img src="images/Projets/Projet_PHP_-_En_Vadrouille.png" alt="En Vadrouille">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-tag">Web</span>
+                            <h3>En Vadrouille</h3>
+                            <p>Blog interactif pour partager des activités et sorties à Paris, avec système de tags et recommandations personnalisées.</p>
+                            <button class="project-btn">Voir le projet</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section> -->
+
+        <section class="projects reveal">
+            <div class="projects-header" style="text-align: right;">
+                <h2>Projets<span>.</span></h2>
+                <p>Une sélection de travaux mêlant développement, design et réflexion UX.</p>
+            </div>
+
+            <!-- Conteneur pour les cartes générées via JS -->
+            <div class="projects-grid" id="projects-grid"></div>
+        </section>
+
+
+        <section class="reviews reveal">
+            <div class="reviews-header">
+                <h2>Avis<span>.</span></h2>
+                <p>Retours de personnes avec qui j’ai eu l’occasion de travailler.</p>
+            </div>
+
+            <div class="reviews-grid">
+                <article class="review-card">
+                    <p class="review-text">
+                        “Jimmy a su comprendre rapidement nos besoins et proposer une interface claire
+                        et moderne. Très sérieux et impliqué.”
+                    </p>
+                    <div class="review-author">
+                        <span class="author-name">Camille R.</span>
+                        <span class="author-role">Cheffe de projet</span>
+                    </div>
+                </article>
+
+                <article class="review-card">
+                    <p class="review-text">
+                        “Un excellent sens du détail et une vraie réflexion UX.
+                        Le rendu final était fluide, cohérent et agréable à utiliser.”
+                    </p>
+                    <div class="review-author">
+                        <span class="author-name">Lucas M.</span>
+                        <span class="author-role">Designer UI/UX</span>
+                    </div>
+                </article>
+
+                <article class="review-card">
+                    <p class="review-text">
+                        “Très bon développeur, organisé et à l’écoute.
+                        Les échanges étaient clairs et le projet livré dans les temps.”
+                    </p>
+                    <div class="review-author">
+                        <span class="author-name">Sarah D.</span>
+                        <span class="author-role">Responsable communication</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="contact reveal" id="contact">
+            <div class="contact-container">
+                <div class="contact-header">
+                    <h2>Contact<span>.</span></h2>
+                    <p>Vous pouvez me joindre via le formulaire ci-dessous ou directement par email.</p>
+                </div>
+
+                <form class="contact-form">
+                    <input type="text" name="name" placeholder="Votre nom" required>
+                    <input type="email" name="email" placeholder="Votre email" required>
+                    <textarea name="message" placeholder="Votre message" rows="6" required></textarea>
+                    <button type="submit">Envoyer</button>
+                </form>
+
+                <div class="contact-info">
+                    <p>Email : <a href="mailto:jimmy@example.com">jimmy@example.com</a></p>
+                    <p>Téléphone : <a href="tel:+33000000000">+33 0 00 00 00 00</a></p>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>TE Jimmy</h3>
+                <p>Développeur web & Designer</p>
+            </div>
+
+            <div class="footer-center">
+                <p>© 2025 TE Jimmy. Tous droits réservés.</p>
+            </div>
+
+            <div class="footer-right">
+                <a href="mailto:jimmy@example.com" class="footer-link">Email</a>
+                <a href="https://www.linkedin.com/in/jimmy" target="_blank" class="footer-link">LinkedIn</a>
+                <a href="https://github.com/jimmy" target="_blank" class="footer-link">GitHub</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Curseur -->
+    <div class="cursor"></div>
+
+    <!-- Modal Project -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-inner">
+                <img id="modal-image" src="" alt="">
+                <div class="modal-text">
+                    <span id="modal-tag"></span>
+                    <h3 id="modal-title"></h3>
+                    <p id="modal-overview"></p><br>
+                    <p id="modal-overview2"></p><br>
+                    <p><strong>Dates :</strong> <span id="modal-dates"></span></p>
+                    <p><strong>Compétences développées :</strong> <span id="modal-skills"></span></p>
+                    <p><strong>Logiciels utilisés :</strong> <span id="modal-software"></span></p>
+                    <p><strong>Contexte :</strong> <span id="modal-context"></span></p>
+                    <button id="modal-btn" class="project-btn">Voir le projet</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

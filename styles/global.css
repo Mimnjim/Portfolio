@@ -1,0 +1,125 @@
+/* =============================
+   VARIABLES
+============================= */
+:root {
+    --primary-color: #009DFF;
+    --secondary-color: #2ecc71;
+    --tertiary-color: #EF1367;
+    --color-yellow: #FFFB2A;
+
+    --projets-color-green: #CCDC8E;
+    --projets-color-pink: #CEADBB;
+    --projets-color-blue: #8EC1CC;
+    --projets-color-red: #AD2000;
+    --projets-color-brown: #755446;
+
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --background-color: #f4f4f4;
+    --text-color: #333333;
+
+    --ff-big-title: 'Holtwood One SC', serif;
+    --ff-jockey: 'Jockey One', sans-serif;
+    --ff-jost: 'Jost', sans-serif;
+}
+
+/* =============================
+   RESET / GLOBAL
+============================= */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* =============================
+   NAVIGATION PRINCIPALE
+============================= */
+.main-nav {
+    position: fixed;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 4rem);
+    max-width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 2rem;
+    border-radius: 16px;
+
+    background: var(--color-yellow);
+    backdrop-filter: blur(12px);
+
+    z-index: 10000;
+    transition: transform 0.3s ease;
+}
+
+.nav-hidden {
+    transform: translateX(-50%) translateY(-150%);
+}
+
+/* =============================
+   LOGO
+============================= */
+.nav-logo {
+    font-family: var(--ff-big-title);
+    text-decoration: none;
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+    color: #0b1620; /* logo sombre sur jaune */
+}
+
+/* =============================
+   LIENS
+============================= */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    position: relative;
+    text-decoration: none;
+    font-family: var(--ff-jost);
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #0b1620; /* liens sombres sur jaune */
+}
+
+/* Soulignement animé */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background-color: #0b1620; /* reprend la couleur du texte */
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* =============================
+   MOBILE
+============================= */
+@media (max-width: 900px) {
+    .nav-links {
+        gap: 1.5rem;
+    }
+}

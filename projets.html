@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Projets — TE Jimmy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- CSS global -->
+<link rel="stylesheet" href="styles/global.css">
+<link rel="stylesheet" href="styles/projets.css">
+<link rel="stylesheet" href="styles/animations.css">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Jockey+One&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="main-nav">
+    <a href="index.html" class="nav-logo">TE JIMMY</a>
+    <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="index.html#about-me">À propos</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<header class="projects-hero nav-light">
+    <h1>Projets<span>.</span></h1>
+    <p>Un parcours créatif mêlant développement, design et interaction.</p>
+</header>
+
+<!-- MAIN -->
+<main class="projects-wrapper">
+    <h2>Développement web</h2>
+    <div id="projects-grid" class="projects-grid">
+        <!-- Les cards seront injectées ici via JS -->
+    </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-container">
+        <p>© 2025 TE Jimmy</p>
+    </div>
+</footer>
+
+<script>
+// ==========================
+// PROJECTS GRID
+// ==========================
+const projectsGrid = document.getElementById('projects-grid');
+
+function truncateText(text, maxLength = 110) {
+    return text.length > maxLength ? text.slice(0,maxLength)+'…' : text;
+}
+
+// Charger projets JSON
+fetch('json/projects.json')
+  .then(res => res.json())
+  .then(projects => {
+      projects.forEach(p => {
+          const wrapper = document.createElement('div');
+          wrapper.classList.add('project-card-wrapper');
+          wrapper.innerHTML = `
+              <article class="project-card">
+                  <div class="project-media">
+                      <img src="${p.image}" alt="${p.title}">
+                  </div>
+                  <div class="project-content">
+                      <span class="project-tag">${p.tag}</span>
+                      <h3>${p.title}</h3>
+                      <p>${truncateText(p.overview)}</p>
+                      <button class="project-btn">Voir le projet</button>
+                  </div>
+              </article>
+          `;
+          projectsGrid.appendChild(wrapper);
+
+          const card = wrapper.querySelector('.project-card');
+
+          // Hover 3D
+          wrapper.addEventListener('mousemove', e => {
+              const rect = card.getBoundingClientRect();
+              const x = e.clientX - rect.left;
+              const y = e.clientY - rect.top;
+              const rotateX = ((y / rect.height) - 0.5) * 8;
+              const rotateY = ((x / rect.width) - 0.5) * -8;
+              wrapper.style.zIndex = 9999;
+              card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+          });
+
+          wrapper.addEventListener('mouseleave', () => {
+              wrapper.style.zIndex = 1;
+              card.style.transform = 'rotateX(0deg) rotateY(0deg)';
+          });
+
+          // Redirection vers page projet
+          wrapper.querySelector('.project-btn').addEventListener('click', () => {
+              window.location.href = `projet.html?id=${p.id}`;
+          });
+      });
+  });
+
+// ==========================
+// NAV HIDE/SHOW
+// ==========================
+const nav = document.querySelector('.main-nav');
+let lastScrollY = window.scrollY;
+window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+    if(currentScrollY > lastScrollY && currentScrollY > 50){
+        nav.classList.add('nav-hidden');
+    } else {
+        nav.classList.remove('nav-hidden');
+    }
+    lastScrollY = currentScrollY;
+});
+</script>
+
+</body>
+</html>

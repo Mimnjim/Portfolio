@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "title": "WebInventory",
+    "tag": "Web",
+    "overview": "Ce projet individuel avait pour objectif de créer un site permettant d’inventorier différents types de “trucs”, tels que des objets, des lieux, des personnes, des services ou des activités. L’idée était de proposer un outil capable de classer, rechercher et ajouter ces éléments dans une base de données. Le site devait également permettre de visualiser quels objets se trouvent où, qui les possède et dans quelles conditions ils sont accessibles (location, achat, etc.).",
+    "overview2": "Le projet comportait plusieurs fonctionnalités : une page d’accueil présentant le concept et les derniers “trucs” ajoutés, un moteur de recherche avec filtrage et tri des résultats en JavaScript, des fiches détaillées pour chaque “truc”, ainsi qu’une page protégée par mot de passe pour ajouter de nouveaux éléments. Une page personnelle incluant les mentions légales et informations sur la propriété intellectuelle a également été réalisée.",
+    "dates": "2025 – BUT MMI1",
+    "skills": "Rigueur, persévérance, autonomie, créativité.",
+    "software": "HTML, CSS, JavaScript / PHP / MySQL",
+    "context": "Le projet a été réalisé dans un cadre universitaire, à partir des cours d’intégration web et de développement web, où nous avons appris à utiliser HTML, CSS, JavaScript et à manipuler des bases de données avec MySQL.",
+    "link": "https://webinventory.te.projetsmmichamps.fr",
+    "image": "images/Projets/SAE_203_-_WebInventory.png"
+  },
+  {
+    "id": 2,
+    "title": "Site internet – Sélections musicales",
+    "tag": "Web",
+    "overview": "Ce projet de site individuel avait pour objectif de créer une page web répertoriant cinq albums ou morceaux de musique que j’apprécie ou que je n’apprécie pas. L’idée était de présenter mes choix de manière claire et interactive, en intégrant un extrait audio de 15 secondes pour chaque morceau, ainsi qu’un lien vers une plateforme de streaming permettant d’écouter le morceau complet. Chaque morceau était accompagné d’une explication justifiant mon choix et d’images optimisées pour illustrer mes sélections.",
+    "overview2": "Le site devait être one-page et optimisé pour un affichage sur des écrans de plus de 1024 pixels de large. Tous les fichiers ensemble ne devaient pas dépasser 10 Mo, ce qui m’a obligé à optimiser le poids des images et des extraits audio.",
+    "dates": "2024-2025 – BUT MMI1",
+    "skills": "Rigueur, patience, autonomie, créativité.",
+    "software": "HTML, CSS, JavaScript, JSON",
+    "context": "Ce projet s’inscrit dans le cadre universitaire, avec pour objectif de mettre en pratique les connaissances acquises lors des cours et travaux pratiques.",
+    "link": "http://te.projetsmmichamps.fr/sae105/",
+    "image": "images/Projets/SAE_105_-_Echo_Music.png"
+  },
+  {
+    "id": 3,
+    "title": "Visualisation de données - Staytistics",
+    "tag": "Web",
+    "overview": "Ce projet avait pour objectif de créer une visualisation interactive de données sur l’évolution du nombre d’écoutes des albums et musiques du groupe Stray Kids. L’idée était de permettre aux visiteurs de comprendre rapidement et de manière visuelle comment la popularité des albums et des chansons a évolué dans le temps. Le site devait également proposer des informations complémentaires et synthétiser les principaux constats réalisés à partir des données collectées.",
+    "overview2": "Pour rendre la visualisation plus attractive, le site intègre de l’interactivité, des animations et des éléments multimédias comme des images et des extraits audio des musiques. Les utilisateurs peuvent explorer les données, observer les tendances et comparer les chiffres des différents albums et chansons.",
+    "dates": "2025 – BUT MMI2",
+    "skills": "Analyse de données, design UX, développement web.",
+    "software": "HTML, CSS, JavaScript, Chart.js",
+    "context": "Projet juniversitaire visant à créer un site web interactif pour suivre et visualiser les écoutes musicales.",
+    "link": "https://mmi-projets.github.io/Staytistics/",
+    "image": "images/Projets/SAE_303_-_Staytistics.png"
+  },
+  {
+    "id": 4,
+    "title": "Blog interactif - En Vadrouille",
+    "tag": "Web",
+    "overview": "Ce projet consistait à réaliser un blog individuel permettant de partager et de décrire différentes activités réalisées à Paris. L’objectif principal était de créer un site où je pouvais publier mes sorties, ajouter des photos et donner mon avis sur chacune d’entre elles. Les visiteurs peuvent ainsi consulter les articles, découvrir de nouvelles activités et profiter d’un contenu enrichi par des médias visuels.",
+    "overview2": "Le blog a été conçu de manière à différencier les utilisateurs logués et non logués. Les utilisateurs non logués peuvent lire les articles, tandis que les utilisateurs logués peuvent également commenter et interagir avec les publications. Chaque article affiche la date de publication et peut inclure des images et des avis détaillés.",
+    "dates": "2025 – BUT MMI2",
+    "skills": "Créativité, organisation, développement web.",
+    "software": "HTML, CSS, PHP, MySQL, Javascript",
+    "context": "Projet juniversitaire visant à créer un blog fonctionnel pour partager des expériences et activités locales.",
+    "link": "https://tp4-5-php.te.projetsmmichamps.fr/index.php",
+    "image": "images/Projets/Projet_PHP_-_En_Vadrouille.png"
+  }
+]
