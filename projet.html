@@ -20,6 +20,14 @@
     <!-- NAVIGATION -->
     <nav class="main-nav">
         <a href="index.html" class="nav-logo">TE JIMMY</a>
+
+        <!-- Burger -->
+        <button class="burger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
         <ul class="nav-links">
             <li><a href="index.html#about-me">À propos</a></li>
             <li><a href="projets.html">Projets</a></li>
@@ -95,7 +103,7 @@
             </div>
         </div>
     </footer>
-
+    <script src="js/global.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const loader = document.getElementById("loader");
@@ -138,20 +146,6 @@
             document.getElementById('project-software').textContent = p.software;
             document.getElementById('project-link-btn').onclick = () => window.open(p.link, "_blank");
         });
-
-        // Nav hide on scroll
-        const nav = document.querySelector('.main-nav');
-        let lastScrollY = window.scrollY;
-        window.addEventListener('scroll', () => {
-            const currentScrollY = window.scrollY;
-            if(currentScrollY > lastScrollY && currentScrollY > 50){
-                nav.classList.add('nav-hidden');
-            } else {
-                nav.classList.remove('nav-hidden');
-            }
-            lastScrollY = currentScrollY;
-        });
     </script>
-
 </body>
 </html>

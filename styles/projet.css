@@ -27,6 +27,10 @@ a { text-decoration: none; color: inherit; }
 
 h1,h2,h3,h4 { margin: 0; }
 
+main section {
+    padding: 1rem;
+}
+
 /* =============================
    HEADER
 ============================= */
@@ -116,8 +120,6 @@ h1,h2,h3,h4 { margin: 0; }
     display: flex;
     flex-direction: column;
     text-align: left;
-    /* align-items: center; */
-    /* gap: 0.3rem; */
     position: relative;
     padding: 0.2rem 0.5rem;
     transition: color 0.3s ease;
@@ -139,10 +141,8 @@ h1,h2,h3,h4 { margin: 0; }
 .project-extra {
     max-width: 1200px;
     margin: 0 auto 5rem;
-    padding: 2rem;
-    /* background: #fff; */
+    /* padding: 2rem; */
     border-radius: 20px;
-    /* box-shadow: 0 15px 35px rgba(0,0,0,0.1); */
 }
 
 .project-extra h3 {
@@ -178,17 +178,183 @@ h1,h2,h3,h4 { margin: 0; }
     transform: translateY(-2px);
 }
 
-/* =============================
-   RESPONSIVE
-============================= */
-@media(max-width: 1024px){
-    .project-header h1 { font-size: 2.6rem; }
-    .project-intro h2 { font-size: 1.6rem; }
+/* ============================= */
+/*        RESPONSIVE             */
+/* ============================= */
+
+@media (max-width: 1280px) {
+    main section {
+        padding: 0 8rem 2rem;
+    }
 }
 
-@media(max-width: 768px){
-    .project-main { flex-direction: column-reverse; gap: 2rem; }
-    .project-image { width: 100%; }
-    .project-intro { width: 100%; }
-    .project-meta { flex-direction: column; gap: 1.5rem; }
+/* ----------------------------- */
+/*  TABLETTE LARGE (≤ 1024px)   */
+/* ----------------------------- */
+@media (max-width: 1024px) {
+    .project-header h1 {
+        font-size: 2.6rem;
+    }
+    .project-header span {
+        font-size: 1rem;
+    }
+    .project-intro h2 {
+        font-size: 1.6rem;
+    }
+    .project-intro p {
+        font-size: 1rem;
+    }
+    .project-image img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* ----------------------------- */
+/*  TABLETTE / PETIT TABLETTE (≤ 768px) */
+/* ----------------------------- */
+@media (max-width: 768px) {
+    .project-main {
+        flex-direction: column-reverse;
+        gap: 2rem;
+        padding: 0 1.5rem;
+    }
+
+    .project-intro, 
+    .project-image {
+        width: 100%;
+        flex: none;
+    }
+
+    .project-intro h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .project-intro p {
+        font-size: 1rem;
+        text-align: justify;
+    }
+
+    .project-image img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .project-meta {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.2rem;
+    }
+
+    .project-meta .meta-item {
+        font-size: 1rem;
+        padding: 0.2rem 0;
+        text-align: center;
+    }
+
+    .project-meta .meta-item strong {
+        font-size: 1.2rem;
+    }
+
+    .project-extra {
+        padding: 1.5rem;
+    }
+
+    .project-extra h3 {
+        font-size: 1.4rem;
+    }
+
+    .project-extra p {
+        font-size: 0.95rem;
+    }
+
+    #project-link-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 0.7rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* ----------------------------- */
+/*  MOBILE (≤ 480px)             */
+/* ----------------------------- */
+@media (max-width: 480px) {
+    .project-header h1 {
+        font-size: 2rem;
+    }
+
+    .project-header span {
+        font-size: 0.95rem;
+    }
+
+    .project-intro h2 {
+        font-size: 1.3rem;
+    }
+
+    .project-intro p {
+        font-size: 0.95rem;
+    }
+
+    .project-meta {
+        gap: 1rem;
+    }
+
+    .project-meta .meta-item strong {
+        font-size: 1.1rem;
+    }
+
+    .project-extra h3 {
+        font-size: 1.2rem;
+    }
+
+    .project-extra p {
+        font-size: 0.9rem;
+    }
+
+    #project-link-btn {
+        font-size: 0.95rem;
+        padding: 0.6rem 1.2rem;
+    }
+}
+
+/* ----------------------------- */
+/*  MICRO MOBILE (≤ 360px)       */
+/* ----------------------------- */
+@media (max-width: 360px) {
+    .project-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .project-header span {
+        font-size: 0.9rem;
+    }
+
+    .project-intro h2 {
+        font-size: 1.2rem;
+    }
+
+    .project-intro p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .project-meta .meta-item strong {
+        font-size: 1rem;
+    }
+
+    .project-extra h3 {
+        font-size: 1.1rem;
+    }
+
+    .project-extra p {
+        font-size: 0.85rem;
+    }
+
+    #project-link-btn {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
 }

@@ -45,6 +45,13 @@
     <nav class="main-nav">
         <a href="index.html" class="nav-logo">TE JIMMY</a>
 
+        <!-- Burger -->
+        <button class="burger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
         <ul class="nav-links">
             <li><a href="#about-me">À propos</a></li>
             <li><a href="projets.html">Projets</a></li>
@@ -252,26 +259,7 @@
         </div>
     </div>
 
+    <script src="js/global.js"></script>
     <script src="js/script.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const loader = document.getElementById("loader");
-            const hasVisited = localStorage.getItem("visited");
-
-            if (!hasVisited) {
-                loader.style.display = "flex"; 
-
-                window.addEventListener("load", () => {
-                    setTimeout(() => {
-                        loader.classList.add("hidden");
-                        localStorage.setItem("visited", "true");
-                    }, 1800);
-                });
-            } else {
-                loader.style.display = "none";
-            }
-        });
-    </script>
-
 </body>
 </html>
