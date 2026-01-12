@@ -108,13 +108,15 @@ main {
     flex-direction: column;
 }
 
+
+
 /* ============================= */
 /*      INTERESTS / JOBS         */
 /* ============================= */
-section.interests-jobs {
+section.skills {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     gap: 3rem;
     padding: 6rem 2rem;
     background-color: var(--tertiary-color);
@@ -124,21 +126,48 @@ section.interests-jobs {
     position: relative;
 }
 
-section.interests-jobs .elements {
+section.skills h1 {
+    font-family: var(--ff-big-title);
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    color: #fff;
+    margin-right: 5rem;
+}
+
+section.skills h1 span { color: var(--color-yellow); }
+
+
+
+
+div.interests-jobs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* justify-content: center; */
+    gap: 3rem;
+    padding: 3rem 2rem;
+    background-color: var(--tertiary-color);
+    font-family: var(--ff-big-title);
+    text-transform: capitalize;
+    animation: fadeUp 1s ease forwards;
+    position: relative;
+    margin-left: 5rem;
+}
+
+.interests-jobs .elements {
     width: 100%;
     max-width: 900px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
     animation: fadeUp 0.8s ease forwards;
 }
 
-section.interests-jobs .elements:nth-of-type(1) { animation-delay: 0.2s; }
-section.interests-jobs .elements:nth-of-type(2) { animation-delay: 0.4s; }
-section.interests-jobs .elements:nth-of-type(3) { animation-delay: 0.6s; }
-section.interests-jobs .elements:nth-of-type(4) { animation-delay: 0.8s; }
+.interests-jobs .elements:nth-of-type(1) { animation-delay: 0.2s; }
+.interests-jobs .elements:nth-of-type(2) { animation-delay: 0.4s; }
+.interests-jobs .elements:nth-of-type(3) { animation-delay: 0.6s; }
+.interests-jobs .elements:nth-of-type(4) { animation-delay: 0.8s; }
 
-section.interests-jobs .elements h1 {
+.interests-jobs .elements h3 {
     font-size: 1.8rem;
     color: transparent;
     -webkit-text-stroke: 0.2px white;
@@ -146,30 +175,30 @@ section.interests-jobs .elements h1 {
     transition: color 0.3s ease, -webkit-text-stroke 0.3s ease, transform 0.3s ease;
 }
 
-section.interests-jobs .elements h1:hover {
+.interests-jobs .elements h3:hover {
     color: white;
     -webkit-text-stroke: 0;
     transform: scale(1.05);
 }
 
-section.interests-jobs .main-job {
+.interests-jobs .main-job {
     font-size: 3rem;
     color: var(--color-yellow);
-    text-align: center;
+    /* text-align: center; */
     letter-spacing: 3px;
     margin: 2rem 0;
     animation: pulse 4s ease-in-out infinite;
     position: relative;
 }
 
-section.interests-jobs .main-job span {
+.interests-jobs .main-job span {
     display: inline-block;
     opacity: 0;
     transform: translateY(20px);
     animation: letterAppear 0.5s ease forwards;
 }
 
-section.interests-jobs .main-job::after {
+.interests-jobs .main-job::after {
     content: '';
     display: block;
     width: 0;
@@ -289,7 +318,6 @@ section.projects {
 .projects-header {
     max-width: 1100px;
     margin: 0 auto 6rem;
-    text-align: right;
 }
 
 .projects-header h2 {
