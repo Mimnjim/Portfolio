@@ -21,9 +21,8 @@
 <nav class="main-nav">
     <a href="index.html" class="nav-logo">TE JIMMY</a>
     <ul class="nav-links">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="projets.html">Projets</a></li>
         <li><a href="index.html#about-me">À propos</a></li>
+        <li><a href="projets.html">Projets</a></li>
         <li><a href="index.html#contact">Contact</a></li>
     </ul>
 </nav>
@@ -55,7 +54,7 @@
 // ==========================
 const projectsGrid = document.getElementById('projects-grid');
 
-function truncateText(text, maxLength = 110) {
+function truncateText(text, maxLength = 90) {
     return text.length > maxLength ? text.slice(0,maxLength)+'…' : text;
 }
 

@@ -14,7 +14,7 @@
   },
   {
     "id": 2,
-    "title": "Site internet – Sélections musicales",
+    "title": "Echo Music",
     "tag": "Web",
     "overview": "Ce projet de site individuel avait pour objectif de créer une page web répertoriant cinq albums ou morceaux de musique que j’apprécie ou que je n’apprécie pas. L’idée était de présenter mes choix de manière claire et interactive, en intégrant un extrait audio de 15 secondes pour chaque morceau, ainsi qu’un lien vers une plateforme de streaming permettant d’écouter le morceau complet. Chaque morceau était accompagné d’une explication justifiant mon choix et d’images optimisées pour illustrer mes sélections.",
     "overview2": "Le site devait être one-page et optimisé pour un affichage sur des écrans de plus de 1024 pixels de large. Tous les fichiers ensemble ne devaient pas dépasser 10 Mo, ce qui m’a obligé à optimiser le poids des images et des extraits audio.",
@@ -27,7 +27,7 @@
   },
   {
     "id": 3,
-    "title": "Visualisation de données - Staytistics",
+    "title": "Staytistics",
     "tag": "Web",
     "overview": "Ce projet avait pour objectif de créer une visualisation interactive de données sur l’évolution du nombre d’écoutes des albums et musiques du groupe Stray Kids. L’idée était de permettre aux visiteurs de comprendre rapidement et de manière visuelle comment la popularité des albums et des chansons a évolué dans le temps. Le site devait également proposer des informations complémentaires et synthétiser les principaux constats réalisés à partir des données collectées.",
     "overview2": "Pour rendre la visualisation plus attractive, le site intègre de l’interactivité, des animations et des éléments multimédias comme des images et des extraits audio des musiques. Les utilisateurs peuvent explorer les données, observer les tendances et comparer les chiffres des différents albums et chansons.",
@@ -40,7 +40,7 @@
   },
   {
     "id": 4,
-    "title": "Blog interactif - En Vadrouille",
+    "title": "En Vadrouille",
     "tag": "Web",
     "overview": "Ce projet consistait à réaliser un blog individuel permettant de partager et de décrire différentes activités réalisées à Paris. L’objectif principal était de créer un site où je pouvais publier mes sorties, ajouter des photos et donner mon avis sur chacune d’entre elles. Les visiteurs peuvent ainsi consulter les articles, découvrir de nouvelles activités et profiter d’un contenu enrichi par des médias visuels.",
     "overview2": "Le blog a été conçu de manière à différencier les utilisateurs logués et non logués. Les utilisateurs non logués peuvent lire les articles, tandis que les utilisateurs logués peuvent également commenter et interagir avec les publications. Chaque article affiche la date de publication et peut inclure des images et des avis détaillés.",

@@ -200,7 +200,7 @@ section.about-me.active { opacity: 1; transform: translateY(0); }
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
     align-items: center;
-    gap: 4rem;
+    /* gap: 4rem; */
 }
 
 .about-text h2 {
@@ -231,12 +231,15 @@ section.about-me.active { opacity: 1; transform: translateY(0); }
 
 .about-visual {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    gap: 30px;
 }
 
 .about-visual img {
-    width: 180px;
-    filter: grayscale(100%);
+    width: 300px;
+    /* filter: grayscale(100%); */
     opacity: 0.8;
     transition: transform 0.6s ease, filter 0.6s ease, opacity 0.6s ease;
 }
@@ -245,6 +248,25 @@ section.about-me.active { opacity: 1; transform: translateY(0); }
     filter: grayscale(0%);
     opacity: 1;
     transform: scale(1.05);
+}
+
+a.see-cv {
+    background-color: black;
+    font-family: var(--ff-big-title);
+    color: white;
+    padding: 10px 20px;
+    width: 300px;
+    border-radius: 30px;
+    text-align: center;
+    /* margin: auto; */
+    transition: 0.2s ease-out;
+    border: 2px solid white;
+}
+
+a.see-cv:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
 }
 
 /* Responsive About */
@@ -278,7 +300,7 @@ section.projects {
 
 .projects-header p {
     font-family: var(--ff-jost);
-    max-width: 520px;
+    /* max-width: 520px; */
     color: rgba(255, 255, 255, 0.7);
 }
 
