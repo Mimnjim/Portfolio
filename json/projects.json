@@ -50,5 +50,31 @@
     "context": "Projet juniversitaire visant à créer un blog fonctionnel pour partager des expériences et activités locales.",
     "link": "https://tp4-5-php.te.projetsmmichamps.fr/index.php",
     "image": "images/Projets/Projet_PHP_-_En_Vadrouille.png"
+  },
+  {
+    "id": 5,
+    "title": "Short Film Demo",
+    "tag": "Vidéo",
+    "overview": "Un court-métrage réalisé pour le cours de vidéo, explorant des techniques narratives et visuelles innovantes.",
+    "overview2": "Le projet inclut des séquences animées, un montage sonore et un lien YouTube pour visionner la vidéo complète.",
+    "dates": "2025 – BUT MMI2",
+    "skills": "Vidéo, montage, storytelling.",
+    "software": "Adobe Premiere, After Effects",
+    "context": "Projet universitaire de création audiovisuelle.",
+    "link": "https://youtu.be/kAsLaGKIKrU",
+    "image": "images/Projets/SAE3.02_-_Court_metrage.png"
+  },
+  {
+    "id": 6,
+    "title": "Digital Poster Series",
+    "tag": "Création",
+    "overview": "Une série d’affiches numériques réalisées dans le cadre d’un projet créatif, mêlant illustration et design graphique.",
+    "overview2": "Les affiches sont optimisées pour le web et présentées avec des descriptions détaillées de chaque création.",
+    "dates": "2025 – BUT MMI2",
+    "skills": "Illustration, design graphique, créativité.",
+    "software": "Photoshop",
+    "context": "Projet universitaire visant à expérimenter le design graphique numérique.",
+    "link": "https://example.com/creation",
+    "image": "images/Projets/Affiche_-_Les_Enjeux_des_IA_Generatives.jpg"
   }
 ]

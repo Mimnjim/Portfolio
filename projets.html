@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/Favicon-TE_Jimmy.png"/>
 
-
     <!-- CSS global -->
     <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="styles/projets.css">
@@ -25,17 +24,15 @@
             <p>Portfolio - Développeur web</p>
         </div>
     </div>
+
     <!-- NAVIGATION -->
     <nav class="main-nav">
         <a href="index.html" class="nav-logo">TE JIMMY</a>
-        
-        <!-- Burger -->
         <button class="burger" aria-label="Menu">
             <span></span>
             <span></span>
             <span></span>
         </button>
-        
         <ul class="nav-links">
             <li><a href="index.html#about-me">À propos</a></li>
             <li><a href="projets.html">Projets</a></li>
@@ -51,7 +48,14 @@
 
     <!-- MAIN -->
     <main class="projects-wrapper">
-        <h2>Développement web</h2>
+        <!-- Filtres -->
+        <div class="projects-filters">
+            <button data-filter="All" class="active">Tous</button>
+            <button data-filter="Web">Web</button>
+            <button data-filter="Vidéo">Vidéo</button>
+            <button data-filter="Création">Création</button>
+        </div>
+
         <div id="projects-grid" class="projects-grid">
             <!-- Les cards seront injectées ici via JS -->
         </div>
@@ -85,7 +89,6 @@
 
             if (!hasVisited) {
                 loader.style.display = "flex";
-
                 window.addEventListener("load", () => {
                     setTimeout(() => {
                         loader.classList.add("hidden");
@@ -98,19 +101,29 @@
         });
 
         // ==========================
-        // PROJECTS GRID
+        // PROJECTS GRID + FILTERS
         // ==========================
         const projectsGrid = document.getElementById('projects-grid');
+        const filters = document.querySelectorAll('.projects-filters button');
 
         function truncateText(text, maxLength = 90) {
             return text.length > maxLength ? text.slice(0,maxLength)+'…' : text;
         }
 
+        let allProjects = [];
+
         // Charger projets JSON
         fetch('json/projects.json')
         .then(res => res.json())
         .then(projects => {
-            projects.forEach(p => {
+            allProjects = projects;
+            displayProjects(allProjects);
+        });
+
+        function displayProjects(projectsArray) {
+            projectsGrid.innerHTML = "";
+
+            projectsArray.forEach((p, index) => {
                 const wrapper = document.createElement('div');
                 wrapper.classList.add('project-card-wrapper');
                 wrapper.innerHTML = `
@@ -127,6 +140,11 @@
                     </article>
                 `;
                 projectsGrid.appendChild(wrapper);
+
+                // Fade-in progressif
+                setTimeout(() => {
+                    wrapper.classList.add('show');
+                }, index * 100);
 
                 const card = wrapper.querySelector('.project-card');
 
@@ -151,8 +169,26 @@
                     window.location.href = `projet.html?id=${p.id}`;
                 });
             });
+        }
+
+        // ==========================
+        // FILTERS CLICK
+        // ==========================
+        filters.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filters.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.dataset.filter;
+
+                if(filter === "All") {
+                    displayProjects(allProjects);
+                } else {
+                    const filtered = allProjects.filter(p => p.tag === filter);
+                    displayProjects(filtered);
+                }
+            });
         });
     </script>
-
 </body>
 </html>

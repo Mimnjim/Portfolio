@@ -50,6 +50,8 @@ a {
 
 }
 
+
+
 .projects-wrapper h2 {
     font-size: 2rem;
     font-weight: bold;
@@ -75,6 +77,33 @@ a {
     background-color: var(--color-yellow);
     border-radius: 4px;
 }
+
+
+.projects-filters {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.projects-filters button {
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: var(--font-main);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.projects-filters button.active,
+.projects-filters button:hover {
+    background-color: var(--tertiary-color);
+}
+
+
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(300px, 1fr));
@@ -85,6 +114,14 @@ a {
 
 .project-card-wrapper {
     perspective: 1000px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.project-card-wrapper.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 
