@@ -895,26 +895,6 @@ section.contact.active {
     transform: translateY(-20px) rotateX(0deg) rotateY(0deg) scale(1.05);
 }
 
-.cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    border: 2px solid var(--color-yellow);
-    border-radius: 50%;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    transition: transform 0.1s ease, background 0.3s ease, width 0.2s ease, height 0.2s ease;
-    z-index: 9999;
-}
-
-.cursor.hovered {
-    width: 40px;
-    height: 40px;
-    background-color: rgba(255, 255, 0, 0.2);
-}
-
 button, .project-btn {
     position: relative;
     overflow: hidden;
