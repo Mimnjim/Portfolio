@@ -14,6 +14,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jockey+One&family=Jost:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="loader">
+        <div class="loader-content">
+            <h1>Jimmy<span>.</span></h1>
+            <div class="loader-line"></div>
+            <p>Portfolio - Développeur web</p>
+        </div>
+    </div>
+
+
     <header>
         <div class="content-header">
             <div class="motif">+</div>
@@ -66,7 +75,72 @@
         </section>
 
 
-        <section class="skills">
+
+        <section class="skills-text">
+            <div class="skills-wrapper">
+
+                <h2>
+                    Mes compétences<span>.</span>
+                </h2>
+
+                <div class="skills-columns">
+
+                    <div class="skills-block">
+                        <h3>Développement web</h3>
+                        <p>
+                            Intégration HTML sémantique, CSS avancé (animations, responsive design),
+                            JavaScript pour l’interactivité, bases solides en PHP et MySQL.
+                        </p>
+                    </div>
+
+                    <div class="skills-block">
+                        <h3>Design & UX</h3>
+                        <p>
+                            Conception d’interfaces claires et cohérentes,
+                            centrées sur l’utilisateur, en appliquant
+                            les bonnes pratiques Opquast
+                            (accessibilité, compréhension, ergonomie).
+                        </p>
+                    </div>
+
+                    <div class="skills-block">
+                        <h3>Organisation & méthode</h3>
+                        <p>
+                            Rigueur, autonomie, capacité à mener un projet de A à Z,
+                            respect des contraintes techniques et créatives.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="specialties">
+                <h3 class="specialties-title">Mes spécialités</h3>
+
+                <article class="specialty">
+                    <h4>Ergonomie & UX</h4>
+                    <p>UX / UI Design</p>
+                    <span>Figma · Opquast</span>
+                </article>
+
+                <article class="specialty">
+                    <h4>Montage vidéo</h4>
+                    <p>Post-production</p>
+                    <span>Premiere Pro · After Effects</span>
+                </article>
+
+                <article class="specialty">
+                    <h4>Développement web</h4>
+                    <p>Front-end & Back-end</p>
+                    <span>HTML · CSS · JavaScript · PHP · MySQL</span>
+                </article>
+            </div>
+
+        </section>
+
+        
+        <!-- <section class="skills">
             <h1 style="text-align: right;">Compétences<span>.</span></h1>
             <div class="interests-jobs">
             
@@ -97,7 +171,7 @@
                 </div>
             
             </div>
-        </section>
+        </section> -->
 
         <section class="projects reveal">
             <div class="projects-header" style="text-align: left;">
@@ -113,19 +187,18 @@
 
         <section class="reviews reveal">
             <div class="reviews-header">
-                <h2>Avis<span>.</span></h2>
-                <p>Retours de personnes avec qui j’ai eu l’occasion de travailler.</p>
+                <h2 style="text-align: right;">Avis<span>.</span></h2>
+                <p style="text-align: right;">Retours de personnes avec qui j’ai eu l’occasion de travailler.</p>
             </div>
 
             <div class="reviews-grid">
                 <article class="review-card">
                     <p class="review-text">
-                        “Jimmy a su comprendre rapidement nos besoins et proposer une interface claire
-                        et moderne. Très sérieux et impliqué.”
+                        “Toujours efficace et souriant, Jimmy fait plaisir à avoir en équipe. Les clients l’adorent et je suis ravie de travailler avec lui !”
                     </p>
                     <div class="review-author">
-                        <span class="author-name">Camille R.</span>
-                        <span class="author-role">Cheffe de projet</span>
+                        <span class="author-name">Fadoua</span>
+                        <span class="author-role">Encadrant chez Lidl</span>
                     </div>
                 </article>
 
@@ -135,8 +208,8 @@
                         Le rendu final était fluide, cohérent et agréable à utiliser.”
                     </p>
                     <div class="review-author">
-                        <span class="author-name">Lucas M.</span>
-                        <span class="author-role">Designer UI/UX</span>
+                        <span class="author-name">Tom</span>
+                        <span class="author-role">Etudiant MMI</span>
                     </div>
                 </article>
 
@@ -146,8 +219,8 @@
                         Les échanges étaient clairs et le projet livré dans les temps.”
                     </p>
                     <div class="review-author">
-                        <span class="author-name">Sarah D.</span>
-                        <span class="author-role">Responsable communication</span>
+                        <span class="author-name">Alex</span>
+                        <span class="author-role">Etudiant MMI</span>
                     </div>
                 </article>
             </div>
@@ -155,21 +228,26 @@
 
         <section class="contact reveal" id="contact">
             <div class="contact-container">
+
                 <div class="contact-header">
                     <h2>Contact<span>.</span></h2>
-                    <p>Vous pouvez me joindre via le formulaire ci-dessous ou directement par email.</p>
+                    <p class="contact-intro">
+                        Si vous souhaitez échanger à propos d’un projet, d’une collaboration
+                        ou simplement discuter, n’hésitez pas à me contacter.
+                    </p>
                 </div>
 
-                <form class="contact-form">
-                    <input type="text" name="name" placeholder="Votre nom" required>
-                    <input type="email" name="email" placeholder="Votre email" required>
-                    <textarea name="message" placeholder="Votre message" rows="6" required></textarea>
-                    <button type="submit">Envoyer</button>
-                </form>
-
-                <div class="contact-info">
-                    <p>Email : <a href="mailto:jimmy@example.com">Je vais créer un mail@gmail.com</a></p>
+                <div class="contact-mail">
+                    <p>Vous pouvez m’écrire directement à l’adresse suivante :</p>
+                    <a href="mailto:contact.jimmy@gmail.com" class="mail-link">
+                        contact.jimmy@gmail.com
+                    </a>
                 </div>
+
+                <p class="contact-footer">
+                    Je réponds généralement rapidement.
+                </p>
+
             </div>
         </section>
 
@@ -190,7 +268,7 @@
             <div class="footer-right">
                 <a href="mailto:jimmy@example.com" class="footer-link">Email</a>
                 <a href="https://www.linkedin.com/in/jimmy" target="_blank" class="footer-link">LinkedIn</a>
-                <a href="https://github.com/jimmy" target="_blank" class="footer-link">GitHub</a>
+                <a href="https://github.com/Mimnjim" target="_blank" class="footer-link">GitHub</a>
             </div>
         </div>
     </footer>
@@ -219,5 +297,29 @@
     </div>
 
     <script src="js/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const loader = document.getElementById("loader");
+
+            // Vérifie si l'utilisateur a déjà vu le loader
+            const hasVisited = localStorage.getItem("visited");
+
+            if (!hasVisited) {
+                // Si c'est la première visite
+                loader.style.display = "flex"; // assure que le loader est visible
+
+                window.addEventListener("load", () => {
+                    setTimeout(() => {
+                        loader.classList.add("hidden");
+                        localStorage.setItem("visited", "true"); // marque comme visité
+                    }, 1800); // durée du loader
+                });
+            } else {
+                // Si déjà visité, on le cache directement
+                loader.style.display = "none";
+            }
+        });
+    </script>
+
 </body>
 </html>

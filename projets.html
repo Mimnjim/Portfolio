@@ -18,110 +18,138 @@
     <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Jockey+One&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
-<!-- NAVIGATION -->
-<nav class="main-nav">
-    <a href="index.html" class="nav-logo">TE JIMMY</a>
-    <ul class="nav-links">
-        <li><a href="index.html#about-me">À propos</a></li>
-        <li><a href="projets.html">Projets</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-    </ul>
-</nav>
-
-<!-- HERO -->
-<header class="projects-hero nav-light">
-    <h1>Projets<span>.</span></h1>
-    <p>Un parcours créatif mêlant développement, design et interaction.</p>
-</header>
-
-<!-- MAIN -->
-<main class="projects-wrapper">
-    <h2>Développement web</h2>
-    <div id="projects-grid" class="projects-grid">
-        <!-- Les cards seront injectées ici via JS -->
+    <div id="loader">
+        <div class="loader-content">
+            <h1>Jimmy<span>.</span></h1>
+            <div class="loader-line"></div>
+            <p>Portfolio - Développeur web</p>
+        </div>
     </div>
-</main>
+    <!-- NAVIGATION -->
+    <nav class="main-nav">
+        <a href="index.html" class="nav-logo">TE JIMMY</a>
+        <ul class="nav-links">
+            <li><a href="index.html#about-me">À propos</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-<!-- FOOTER -->
-<footer>
-    <div class="footer-container">
-        <p>© 2025 TE Jimmy</p>
-    </div>
-</footer>
+    <!-- HERO -->
+    <header class="projects-hero nav-light">
+        <h1>Projets<span>.</span></h1>
+        <p>Un parcours créatif mêlant développement, design et interaction.</p>
+    </header>
 
-<script>
-// ==========================
-// PROJECTS GRID
-// ==========================
-const projectsGrid = document.getElementById('projects-grid');
+    <!-- MAIN -->
+    <main class="projects-wrapper">
+        <h2>Développement web</h2>
+        <div id="projects-grid" class="projects-grid">
+            <!-- Les cards seront injectées ici via JS -->
+        </div>
+    </main>
 
-function truncateText(text, maxLength = 90) {
-    return text.length > maxLength ? text.slice(0,maxLength)+'…' : text;
-}
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <p>© 2025 TE Jimmy</p>
+        </div>
+    </footer>
 
-// Charger projets JSON
-fetch('json/projects.json')
-  .then(res => res.json())
-  .then(projects => {
-      projects.forEach(p => {
-          const wrapper = document.createElement('div');
-          wrapper.classList.add('project-card-wrapper');
-          wrapper.innerHTML = `
-              <article class="project-card">
-                  <div class="project-media">
-                      <img src="${p.image}" alt="${p.title}">
-                  </div>
-                  <div class="project-content">
-                      <span class="project-tag">${p.tag}</span>
-                      <h3>${p.title}</h3>
-                      <p>${truncateText(p.overview)}</p>
-                      <button class="project-btn">Voir le projet</button>
-                  </div>
-              </article>
-          `;
-          projectsGrid.appendChild(wrapper);
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const loader = document.getElementById("loader");
 
-          const card = wrapper.querySelector('.project-card');
+            // Vérifie si l'utilisateur a déjà vu le loader
+            const hasVisited = localStorage.getItem("visited");
 
-          // Hover 3D
-          wrapper.addEventListener('mousemove', e => {
-              const rect = card.getBoundingClientRect();
-              const x = e.clientX - rect.left;
-              const y = e.clientY - rect.top;
-              const rotateX = ((y / rect.height) - 0.5) * 8;
-              const rotateY = ((x / rect.width) - 0.5) * -8;
-              wrapper.style.zIndex = 9999;
-              card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-          });
+            if (!hasVisited) {
+                // Si c'est la première visite
+                loader.style.display = "flex"; // assure que le loader est visible
 
-          wrapper.addEventListener('mouseleave', () => {
-              wrapper.style.zIndex = 1;
-              card.style.transform = 'rotateX(0deg) rotateY(0deg)';
-          });
+                window.addEventListener("load", () => {
+                    setTimeout(() => {
+                        loader.classList.add("hidden");
+                        localStorage.setItem("visited", "true"); // marque comme visité
+                    }, 1800); // durée du loader
+                });
+            } else {
+                // Si déjà visité, on le cache directement
+                loader.style.display = "none";
+            }
+        });
 
-          // Redirection vers page projet
-          wrapper.querySelector('.project-btn').addEventListener('click', () => {
-              window.location.href = `projet.html?id=${p.id}`;
-          });
-      });
-  });
+        // ==========================
+        // PROJECTS GRID
+        // ==========================
+        const projectsGrid = document.getElementById('projects-grid');
 
-// ==========================
-// NAV HIDE/SHOW
-// ==========================
-const nav = document.querySelector('.main-nav');
-let lastScrollY = window.scrollY;
-window.addEventListener('scroll', () => {
-    const currentScrollY = window.scrollY;
-    if(currentScrollY > lastScrollY && currentScrollY > 50){
-        nav.classList.add('nav-hidden');
-    } else {
-        nav.classList.remove('nav-hidden');
-    }
-    lastScrollY = currentScrollY;
-});
-</script>
+        function truncateText(text, maxLength = 90) {
+            return text.length > maxLength ? text.slice(0,maxLength)+'…' : text;
+        }
+
+        // Charger projets JSON
+        fetch('json/projects.json')
+        .then(res => res.json())
+        .then(projects => {
+            projects.forEach(p => {
+                const wrapper = document.createElement('div');
+                wrapper.classList.add('project-card-wrapper');
+                wrapper.innerHTML = `
+                    <article class="project-card">
+                        <div class="project-media">
+                            <img src="${p.image}" alt="${p.title}">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-tag">${p.tag}</span>
+                            <h3>${p.title}</h3>
+                            <p>${truncateText(p.overview)}</p>
+                            <button class="project-btn">Voir le projet</button>
+                        </div>
+                    </article>
+                `;
+                projectsGrid.appendChild(wrapper);
+
+                const card = wrapper.querySelector('.project-card');
+
+                // Hover 3D
+                wrapper.addEventListener('mousemove', e => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const rotateX = ((y / rect.height) - 0.5) * 8;
+                    const rotateY = ((x / rect.width) - 0.5) * -8;
+                    wrapper.style.zIndex = 9999;
+                    card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+                });
+
+                wrapper.addEventListener('mouseleave', () => {
+                    wrapper.style.zIndex = 1;
+                    card.style.transform = 'rotateX(0deg) rotateY(0deg)';
+                });
+
+                // Redirection vers page projet
+                wrapper.querySelector('.project-btn').addEventListener('click', () => {
+                    window.location.href = `projet.html?id=${p.id}`;
+                });
+            });
+        });
+
+        // ==========================
+        // NAV HIDE/SHOW
+        // ==========================
+        const nav = document.querySelector('.main-nav');
+        let lastScrollY = window.scrollY;
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+            if(currentScrollY > lastScrollY && currentScrollY > 50){
+                nav.classList.add('nav-hidden');
+            } else {
+                nav.classList.remove('nav-hidden');
+            }
+            lastScrollY = currentScrollY;
+        });
+    </script>
 
 </body>
 </html>

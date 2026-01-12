@@ -145,7 +145,7 @@ a {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
-    cursor: pointer;
+    /* cursor: pointer; */
     height: 100%;
 }
 
@@ -176,7 +176,7 @@ a {
 .project-tag {
     font-size: 0.85rem;
     font-weight: 600;
-    color: #f39c12;
+    color: var(--primary-color);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -188,7 +188,7 @@ a {
 }
 
 .project-card:hover h3 {
-    color: #f39c12;
+    color: var(--tertiary-color);
 }
 
 .project-content p {
@@ -199,7 +199,7 @@ a {
 
 .project-btn {
     padding: 0.6rem 1.4rem;
-    background: #f39c12;
+    background: var(--tertiary-color);
     border: none;
     border-radius: 8px;
     color: #fff;
@@ -210,7 +210,7 @@ a {
 }
 
 .project-btn:hover {
-    background: #e67e22;
+    background: #e01160;
     transform: translateY(-2px);
 }
 

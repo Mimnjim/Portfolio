@@ -10,87 +10,132 @@
     <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Jockey+One&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
-<nav class="main-nav">
-    <a href="index.html" class="nav-logo">TE JIMMY</a>
-    <ul class="nav-links">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="projets.html">Projets</a></li>
-        <li><a href="#about">À propos</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
-
-<main class="project-page">
-    <div class="project-header">
-        <h1 id="project-title"></h1>
-        <span id="project-tag"></span>
-    </div>
-
-    <div class="project-visual">
-        <img id="project-image" src="" alt="">
-    </div>
-
-    <div class="project-details">
-        <p id="project-overview"></p>
-
-        <ul class="project-meta">
-            <li><strong>Dates :</strong> <span id="project-dates"></span></li>
-            <li><strong>Compétences :</strong> <span id="project-skills"></span></li>
-            <li><strong>Contexte :</strong> <span id="project-context"></span></li>
-        </ul>
-
-        <div class="project-extra">
-            <p id="project-overview2"></p>
-            <p><strong>Logiciels utilisés :</strong> <span id="project-software"></span></p>
-            <button id="project-link-btn">Voir le projet</button>
+    <div id="loader">
+        <div class="loader-content">
+            <h1>Jimmy<span>.</span></h1>
+            <div class="loader-line"></div>
+            <p>Portfolio - Développeur web</p>
         </div>
     </div>
-</main>
+    <nav class="main-nav">
+        <a href="index.html" class="nav-logo">TE JIMMY</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-<footer>
-    <div class="footer-container">
-        <p>© 2025 TE Jimmy</p>
-    </div>
-</footer>
+    <main class="project-page">
+        <div class="project-header">
+            <h1 id="project-title"></h1>
+            <span id="project-tag"></span>
+        </div>
 
-<script>
-const params = new URLSearchParams(window.location.search);
-const projectId = params.get("id");
+        <div class="project-visual">
+            <img id="project-image" src="" alt="">
+        </div>
 
-fetch('json/projects.json')
-  .then(res => res.json())
-  .then(projects => {
-      const p = projects.find(proj => proj.id == projectId);
-      if(!p) return;
+        <div class="project-details">
+            <!-- Overview -->
+            <div class="details-overview">
+                <h3>Présentation du projet</h3>
+                <p id="project-overview"></p>
+            </div>
 
-      // Injecter les données
-      document.getElementById('project-title').textContent = p.title;
-      document.getElementById('project-tag').textContent = p.tag;
-      document.getElementById('project-image').src = p.image;
-      document.getElementById('project-image').alt = p.title;
-      document.getElementById('project-overview').textContent = p.overview;
-      document.getElementById('project-overview2').textContent = p.overview2;
-      document.getElementById('project-dates').textContent = p.dates;
-      document.getElementById('project-skills').textContent = p.skills;
-      document.getElementById('project-context').textContent = p.context;
-      document.getElementById('project-software').textContent = p.software;
-      document.getElementById('project-link-btn').onclick = () => window.open(p.link, "_blank");
-  });
+            <!-- Meta info -->
+            <div class="details-meta">
+                <div class="meta-item">
+                    <h4>Dates</h4>
+                    <p id="project-dates"></p>
+                </div>
+                <div class="meta-item">
+                    <h4>Compétences</h4>
+                    <p id="project-skills"></p>
+                </div>
+                <div class="meta-item">
+                    <h4>Contexte</h4>
+                    <p id="project-context"></p>
+                </div>
+            </div>
 
-// Nav hide on scroll
-const nav = document.querySelector('.main-nav');
-let lastScrollY = window.scrollY;
-window.addEventListener('scroll', () => {
-    const currentScrollY = window.scrollY;
-    if(currentScrollY > lastScrollY && currentScrollY > 50){
-        nav.classList.add('nav-hidden');
-    } else {
-        nav.classList.remove('nav-hidden');
-    }
-    lastScrollY = currentScrollY;
-});
-</script>
+            <!-- Extra info -->
+            <div class="details-extra">
+                <h3>Informations supplémentaires</h3>
+                <p id="project-overview2"></p>
+                <p><strong>Logiciels utilisés :</strong> <span id="project-software"></span></p>
+                <button id="project-link-btn">Voir le projet</button>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>© 2025 TE Jimmy</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const loader = document.getElementById("loader");
+
+            // Vérifie si l'utilisateur a déjà vu le loader
+            const hasVisited = localStorage.getItem("visited");
+
+            if (!hasVisited) {
+                // Si c'est la première visite
+                loader.style.display = "flex"; // assure que le loader est visible
+
+                window.addEventListener("load", () => {
+                    setTimeout(() => {
+                        loader.classList.add("hidden");
+                        localStorage.setItem("visited", "true"); // marque comme visité
+                    }, 1800); // durée du loader
+                });
+            } else {
+                // Si déjà visité, on le cache directement
+                loader.style.display = "none";
+            }
+        });
+
+        const params = new URLSearchParams(window.location.search);
+        const projectId = params.get("id");
+
+        fetch('json/projects.json')
+        .then(res => res.json())
+        .then(projects => {
+            const p = projects.find(proj => proj.id == projectId);
+            if(!p) return;
+
+            // Injecter les données
+            document.getElementById('project-title').textContent = p.title;
+            document.getElementById('project-tag').textContent = p.tag;
+            document.getElementById('project-image').src = p.image;
+            document.getElementById('project-image').alt = p.title;
+            document.getElementById('project-overview').textContent = p.overview;
+            document.getElementById('project-overview2').textContent = p.overview2;
+            document.getElementById('project-dates').textContent = p.dates;
+            document.getElementById('project-skills').textContent = p.skills;
+            document.getElementById('project-context').textContent = p.context;
+            document.getElementById('project-software').textContent = p.software;
+            document.getElementById('project-link-btn').onclick = () => window.open(p.link, "_blank");
+        });
+
+        // Nav hide on scroll
+        const nav = document.querySelector('.main-nav');
+        let lastScrollY = window.scrollY;
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+            if(currentScrollY > lastScrollY && currentScrollY > 50){
+                nav.classList.add('nav-hidden');
+            } else {
+                nav.classList.remove('nav-hidden');
+            }
+            lastScrollY = currentScrollY;
+        });
+    </script>
 
 </body>
 </html>
