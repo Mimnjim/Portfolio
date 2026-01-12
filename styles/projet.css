@@ -1,234 +1,194 @@
-/* ===== BASE ===== */
+/* =============================
+   VARIABLES
+============================= */
+:root {
+    --primary-color: #009DFF;
+    --tertiary-color: #EF1367;
+    --color-yellow: #FFFB2A;
+    --bg-color: #f5f5f5;
+    --text-color: #222;
+
+    --font-main: 'Jost', sans-serif;
+    --font-title: 'Holtwood One SC', serif;
+}
+
+/* =============================
+   BASE
+============================= */
 body {
-    font-family: 'Jost', sans-serif;
-    background: #f5f5f5;
-    color: #222;
+    font-family: var(--font-main);
+    background: var(--bg-color);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
+a { text-decoration: none; color: inherit; }
 
-/* ===== NAVIGATION ===== */
-/* .main-nav {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% - 2rem);
-    max-width: 1200px;
-    background: rgba(255,255,255,0.95);
-    backdrop-filter: blur(10px);
-    border-radius: 0 0 12px 12px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    z-index: 1000;
-    transition: transform 0.4s ease, background 0.3s ease;
-}
+h1,h2,h3,h4 { margin: 0; }
 
-.main-nav.nav-hidden {
-    transform: translateX(-50%) translateY(-150%);
-}
-
-.nav-logo {
-    font-family: 'Holtwood One SC', serif;
-    font-size: 1.8rem;
-    color: #222;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-}
-
-.nav-links li a {
-    font-weight: 500;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-}
-
-.nav-links li a:hover {
-    color: #009DFF;
-} */
-
-/* ===== PROJECT PAGE ===== */
-.project-page {
-    max-width: 1200px;
-    margin: 10rem auto 4rem;
-    padding: 0 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-}
-
-/* ===== HEADER ===== */
+/* =============================
+   HEADER
+============================= */
 .project-header {
     text-align: center;
+    margin: 10rem 0 3rem;
 }
 
 .project-header h1 {
-    font-family: 'Holtwood One SC', serif;
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-    color: #222;
+    font-family: var(--font-title);
+    font-size: 3rem;
+    color: var(--primary-color);
 }
 
 .project-header span {
-    font-size: 1rem;
-    color: #009DFF;
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
     font-weight: 600;
+    color: var(--tertiary-color);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-/* ===== VISUAL ===== */
-.project-visual img {
+/* =============================
+   SECTION PRINCIPALE
+============================= */
+.project-main {
+    display: flex;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.project-intro {
+    flex: 1 1 500px;
+}
+
+.project-intro h2 {
+    font-family: var(--font-title);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--tertiary-color);
+}
+
+.project-intro p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #444;
+}
+
+.project-image {
+    flex: 1 1 600px;
+}
+
+.project-image img {
     width: 100%;
-    height: auto;
     border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
 }
 
-.project-visual img:hover {
-    transform: scale(1.02);
+.project-image img:hover {
+    transform: scale(1.03);
 }
 
-
-/* ===== PROJECT DETAILS RELOOKED ===== */
-.project-details {
-    background: #fff;
-    padding: 4rem 5rem;
-    border-radius: 24px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-    font-size: 1rem;
-    line-height: 1.8;
-    color: #333;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-details:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 22px 50px rgba(0,0,0,0.15);
-}
-
-/* ===== SHORT OVERVIEW ===== */
-#project-overview {
-    font-size: 1.1rem;
-    color: #444;
-    font-weight: 500;
-}
-
-/* ===== META RELOOKÉE ===== */
+/* =============================
+   META INFO
+============================= */
 .project-meta {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 1rem;
+    justify-content: center; /* centré */
+    /* gap: 2rem;  */
+    margin: 2rem 0;
+    font-size: 1rem;
+    color: #444;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto 3rem;
 }
 
-.project-meta li {
-    background: #f0f4ff; /* couleur douce de fond */
-    border-left: 6px solid #009DFF; /* accent color */
-    padding: 0.8rem 1rem;
-    border-radius: 12px;
-    min-width: 220px;
-    font-weight: 500;
-    color: #222;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+.project-meta .meta-item {
     display: flex;
     flex-direction: column;
+    text-align: left;
+    /* align-items: center; */
+    /* gap: 0.3rem; */
+    position: relative;
+    padding: 0.2rem 0.5rem;
+    transition: color 0.3s ease;
+    font-size: 1.1rem;
 }
 
-.project-meta li:nth-child(2) {
-    border-left-color: #f39c12; /* compétences */
-    background: #fff8f0;
-}
-
-.project-meta li:nth-child(3) {
-    border-left-color: #27ae60; /* contexte */
-    background: #f0fff4;
-}
-
-.project-meta li:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-
-/* Texte meta */
-.project-meta li strong {
-    display: block;
-    margin-bottom: 0.3rem;
-    color: #222;
+/* Accent color pour les titres */
+.project-meta .meta-item strong {
+    color: var(--tertiary-color);
     font-weight: 600;
+    font-size: 1.4rem;
 }
 
-/* ===== EXTRA DETAILS ===== */
+
+
+/* =============================
+   EXTRA DETAILS
+============================= */
 .project-extra {
-    border-top: 1px solid #eee;
-    padding-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
+    max-width: 1200px;
+    margin: 0 auto 5rem;
+    padding: 2rem;
+    /* background: #fff; */
+    border-radius: 20px;
+    /* box-shadow: 0 15px 35px rgba(0,0,0,0.1); */
+}
+
+.project-extra h3 {
+    font-family: var(--font-title);
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: var(--tertiary-color);
+    text-align: center;
 }
 
 .project-extra p {
-    color: #555;
-    font-size: 1.1rem;
-    line-height: 1.6;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 0.8rem;
 }
 
-/* Logiciels utilisés en style distinct */
-.project-extra p strong {
-    color: #222;
-}
-
-/* ===== BUTTON ===== */
 #project-link-btn {
-    padding: 0.75rem 1.8rem;
-    background: #009DFF;
+    padding: 0.8rem 2rem;
+    background: var(--primary-color);
     color: #fff;
-    font-weight: 600;
-    border-radius: 12px;
     border: none;
+    border-radius: 12px;
+    font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    align-self: flex-start;
+    display: flex;
+    margin: 0 auto;
 }
 
 #project-link-btn:hover {
-    background: #007acc;
+    background: var(--tertiary-color);
     transform: translateY(-2px);
 }
 
-/* ===== RESPONSIVE ===== */
+/* =============================
+   RESPONSIVE
+============================= */
+@media(max-width: 1024px){
+    .project-header h1 { font-size: 2.6rem; }
+    .project-intro h2 { font-size: 1.6rem; }
+}
+
 @media(max-width: 768px){
-    .project-details {
-        padding: 2rem 1.5rem;
-        gap: 2rem;
-    }
-
-    .project-meta {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    #project-overview {
-        font-size: 1rem;
-    }
-
-    .project-extra p {
-        font-size: 0.93rem;
-    }
+    .project-main { flex-direction: column-reverse; gap: 2rem; }
+    .project-image { width: 100%; }
+    .project-intro { width: 100%; }
+    .project-meta { flex-direction: column; gap: 1.5rem; }
 }

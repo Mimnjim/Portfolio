@@ -17,63 +17,82 @@
             <p>Portfolio - Développeur web</p>
         </div>
     </div>
+    <!-- NAVIGATION -->
     <nav class="main-nav">
         <a href="index.html" class="nav-logo">TE JIMMY</a>
         <ul class="nav-links">
-            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html#about-me">À propos</a></li>
             <li><a href="projets.html">Projets</a></li>
-            <li><a href="#about">À propos</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
         </ul>
     </nav>
 
     <main class="project-page">
-        <div class="project-header">
+
+        <!-- HEADER -->
+        <header class="project-header">
             <h1 id="project-title"></h1>
             <span id="project-tag"></span>
-        </div>
+        </header>
 
-        <div class="project-visual">
-            <img id="project-image" src="" alt="">
-        </div>
+        <!-- SECTION PRINCIPALE -->
+        <section class="project-main">
 
-        <div class="project-details">
-            <!-- Overview -->
-            <div class="details-overview">
-                <h3>Présentation du projet</h3>
+            <!-- Présentation -->
+            <div class="project-intro">
+                <h2>Présentation du projet</h2>
                 <p id="project-overview"></p>
             </div>
 
-            <!-- Meta info -->
-            <div class="details-meta">
-                <div class="meta-item">
-                    <h4>Dates</h4>
-                    <p id="project-dates"></p>
-                </div>
-                <div class="meta-item">
-                    <h4>Compétences</h4>
-                    <p id="project-skills"></p>
-                </div>
-                <div class="meta-item">
-                    <h4>Contexte</h4>
-                    <p id="project-context"></p>
-                </div>
+            <!-- Image -->
+            <div class="project-image">
+                <img id="project-image" src="" alt="">
             </div>
 
-            <!-- Extra info -->
-            <div class="details-extra">
-                <h3>Informations supplémentaires</h3>
-                <p id="project-overview2"></p>
-                <p><strong>Logiciels utilisés :</strong> <span id="project-software"></span></p>
-                <button id="project-link-btn">Voir le projet</button>
+        </section>
+
+        <!-- META INFO FLUIDE -->
+        <section class="project-meta">
+            <div class="meta-item">
+                <strong>Dates :</strong> <span id="project-dates"></span>
             </div>
-        </div>
+            <div class="meta-item">
+                <strong>Compétences :</strong> <span id="project-skills"></span>
+            </div>
+            <div class="meta-item">
+                <strong>Contexte :</strong> <span id="project-context"></span>
+            </div>
+        </section>
+
+        <!-- INFORMATIONS SUPPLÉMENTAIRES -->
+        <section class="project-extra">
+            <h3>Informations supplémentaires</h3>
+            <p id="project-overview2"></p>
+            <p><strong>Logiciels utilisés :</strong> <span id="project-software"></span></p>
+            <button id="project-link-btn">Voir le projet</button>
+        </section>
 
     </main>
 
+
+
+    <!-- FOOTER -->
     <footer>
         <div class="footer-container">
-            <p>© 2025 TE Jimmy</p>
+            <div class="footer-left">
+                <h3>TE Jimmy</h3>
+                <p>Développeur web & Designer</p>
+            </div>
+
+            <div class="footer-center">
+                <p>© 2025 TE Jimmy. Tous droits réservés.</p>
+            </div>
+
+            <div class="footer-right">
+                <a href="mailto:jimmy@example.com" class="footer-link">Email</a>
+                <a href="https://www.linkedin.com/in/jimmy" target="_blank" class="footer-link">LinkedIn</a>
+                <a href="https://github.com/Mimnjim" target="_blank" class="footer-link">GitHub</a>
+            </div>
         </div>
     </footer>
 

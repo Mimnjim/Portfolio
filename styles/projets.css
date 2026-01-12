@@ -214,14 +214,6 @@ a {
     transform: translateY(-2px);
 }
 
-footer {
-    padding: 3rem 2rem;
-    text-align: center;
-    background: #fff;
-    color: #555;
-    box-shadow: 0 -5px 20px rgba(0,0,0,0.05);
-    margin-top: 4rem;
-}
 
 @media(max-width: 1024px){
     .projects-hero h1 {
