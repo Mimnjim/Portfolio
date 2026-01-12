@@ -77,7 +77,7 @@ body {
     text-decoration: none;
     font-size: 1.1rem;
     letter-spacing: 3px;
-    color: #0b1620; /* logo sombre sur jaune */
+    color: #0b1620; 
 }
 
 /* =============================
@@ -96,10 +96,9 @@ body {
     font-size: 0.85rem;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #0b1620; /* liens sombres sur jaune */
+    color: #0b1620; 
 }
 
-/* Soulignement animé */
 .nav-links a::after {
     content: '';
     position: absolute;
@@ -107,7 +106,7 @@ body {
     bottom: -6px;
     width: 0%;
     height: 2px;
-    background-color: #0b1620; /* reprend la couleur du texte */
+    background-color: #0b1620; 
     transition: width 0.3s ease;
 }
 
@@ -191,9 +190,6 @@ footer {
     }
 }
 
-
-
-
 /* ============================= */
 /*            LOADER             */
 /* ============================= */
@@ -214,13 +210,11 @@ footer {
     visibility: hidden;
 }
 
-/* Contenu */
 .loader-content {
     text-align: center;
     animation: loaderFade 1.2s ease forwards;
 }
 
-/* Titre */
 .loader-content h1 {
     font-family: var(--ff-big-title);
     font-size: clamp(3rem, 6vw, 5rem);
@@ -232,7 +226,6 @@ footer {
     color: var(--color-yellow);
 }
 
-/* Ligne animée */
 .loader-line {
     width: 0;
     height: 6px;
@@ -242,7 +235,6 @@ footer {
     animation: loaderLine 1.6s ease forwards;
 }
 
-/* Texte */
 .loader-content p {
     font-family: var(--ff-jost);
     font-size: 1.1rem;
@@ -252,30 +244,3 @@ footer {
     animation: loaderText 1.2s ease forwards;
 }
 
-/* Animations */
-@keyframes loaderLine {
-    0% { width: 0; }
-    100% { width: 140px; }
-}
-
-@keyframes loaderFade {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes loaderText {
-    from {
-        opacity: 0;
-        letter-spacing: 8px;
-    }
-    to {
-        opacity: 1;
-        letter-spacing: 4px;
-    }
-}

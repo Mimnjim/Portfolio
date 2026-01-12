@@ -22,7 +22,6 @@
         </div>
     </div>
 
-
     <header>
         <div class="content-header">
             <div class="motif">+</div>
@@ -73,8 +72,6 @@
 
             </div>
         </section>
-
-
 
         <section class="skills-text">
             <div class="skills-wrapper">
@@ -138,40 +135,6 @@
             </div>
 
         </section>
-
-        
-        <!-- <section class="skills">
-            <h1 style="text-align: right;">Compétences<span>.</span></h1>
-            <div class="interests-jobs">
-            
-                <div class="div-skills">
-                    <h2 class="main-job reveal">Ergonomie</h2>
-                    <div class="elements reveal">
-                        <h3>UX Design - UI Design:</h3>
-                        <h4>Figma / Opquast</h4>
-                    </div>
-                </div>
-                <div class="div-skills">
-                    <h2 class="main-job reveal">Monteur</h2>
-                    <div class="elements reveal">
-                        <h3>Logiciels:</h3>
-                        <h4>Premiere Pro / After Effects</h4>
-                    </div>
-                </div>
-                <div class="div-skills">
-                    <h2 class="main-job reveal">Développeur web</h2>
-                    <div class="elements reveal">
-                        <h3>Front-end: </h3>
-                        <h4>HTML / CSS / Javascript</h4>
-                    </div> <br>
-                    <div class="elements reveal">
-                        <h3>Back-end:</h3>
-                        <h4>PHP / MYSQL</h4>
-                    </div>
-                </div>
-            
-            </div>
-        </section> -->
 
         <section class="projects reveal">
             <div class="projects-header" style="text-align: left;">
@@ -293,22 +256,18 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const loader = document.getElementById("loader");
-
-            // Vérifie si l'utilisateur a déjà vu le loader
             const hasVisited = localStorage.getItem("visited");
 
             if (!hasVisited) {
-                // Si c'est la première visite
-                loader.style.display = "flex"; // assure que le loader est visible
+                loader.style.display = "flex"; 
 
                 window.addEventListener("load", () => {
                     setTimeout(() => {
                         loader.classList.add("hidden");
-                        localStorage.setItem("visited", "true"); // marque comme visité
-                    }, 1800); // durée du loader
+                        localStorage.setItem("visited", "true");
+                    }, 1800);
                 });
             } else {
-                // Si déjà visité, on le cache directement
                 loader.style.display = "none";
             }
         });

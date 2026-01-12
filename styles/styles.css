@@ -12,10 +12,9 @@ header {
     color: white;
     position: relative;
     overflow: hidden;
-    background-color: var(--primary-color); /* bleu initial */
+    background-color: var(--primary-color); 
     transition: background-color 1s ease;
 
-    /* Animation de couleur pleine */
     animation: bgCycle 16s ease-in-out infinite alternate;
 }
 
@@ -108,11 +107,6 @@ main {
     flex-direction: column;
 }
 
-
-
-/* ============================= */
-/*      INTERESTS / JOBS         */
-/* ============================= */
 /* ============================= */
 /*            SKILLS             */
 /* ============================= */
@@ -135,7 +129,6 @@ section.skills-text {
 
     display: flex;
     justify-content: right;
-    /* flex-direction: column; */
     align-items: flex-end; /* clé pour le ::after */
     gap: 1rem;
     text-align: right;
@@ -154,14 +147,12 @@ section.skills-text {
     position: absolute;
 }
 
-/* ===== COLONNES ===== */
 .skills-columns {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 4rem;
 }
 
-/* ===== BLOCS ===== */
 .skills-block h3 {
     font-family: var(--ff-jockey);
     font-size: 1.4rem;
@@ -226,7 +217,6 @@ section.skills h1 span { color: var(--color-yellow); }
 /* ============================= */
 /*        SPECIALTIES            */
 /* ============================= */
-
 .specialties {
     max-width: 1100px;
     margin: 8rem auto 0;
@@ -235,7 +225,6 @@ section.skills h1 span { color: var(--color-yellow); }
     gap: 3rem;
 }
 
-/* Titre */
 .specialties-title {
     grid-column: 1 / -1;
     font-family: var(--ff-big-title);
@@ -267,7 +256,6 @@ section.skills h1 span { color: var(--color-yellow); }
     padding: 30px;
 }
 
-/* Ligne de séparation discrète */
 .specialty::after {
     content: '';
     width: 60px;
@@ -277,7 +265,6 @@ section.skills h1 span { color: var(--color-yellow); }
     opacity: 0.7;
 }
 
-/* Titre spécialité */
 .specialty h4 {
     font-family: var(--ff-big-title);
     font-size: 1.45rem;
@@ -285,14 +272,12 @@ section.skills h1 span { color: var(--color-yellow); }
     line-height: 1.2;
 }
 
-/* Domaine */
 .specialty p {
     font-family: var(--ff-jost);
     font-size: 1.05rem;
     color: rgba(255,255,255,0.85);
 }
 
-/* Outils */
 .specialty span {
     font-family: var(--ff-jost);
     font-size: 0.95rem;
@@ -300,9 +285,8 @@ section.skills h1 span { color: var(--color-yellow); }
     letter-spacing: 0.3px;
 }
 
-
 /* ============================= */
-/*        SPECIALTIES RESPONSIVE */
+/*   SPECIALTIES RESPONSIVE */
 /* ============================= */
 
 @media (max-width: 1100px) {
@@ -353,81 +337,6 @@ section.skills h1 span { color: var(--color-yellow); }
     }
 }
 
-
-/* div.interests-jobs {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 3rem;
-    padding: 3rem 2rem;
-    background-color: var(--tertiary-color);
-    font-family: var(--ff-big-title);
-    text-transform: capitalize;
-    animation: fadeUp 1s ease forwards;
-    position: relative;
-    margin-left: 5rem;
-}
-
-.interests-jobs .elements {
-    width: 100%;
-    max-width: 900px;
-    animation: fadeUp 0.8s ease forwards;
-    margin-left: 20px;
-}
-
-.interests-jobs .elements:nth-of-type(1) { animation-delay: 0.2s; }
-.interests-jobs .elements:nth-of-type(2) { animation-delay: 0.4s; }
-.interests-jobs .elements:nth-of-type(3) { animation-delay: 0.6s; }
-.interests-jobs .elements:nth-of-type(4) { animation-delay: 0.8s; }
-
-.interests-jobs .elements h3 {
-    font-size: 1.4rem;
-    color: transparent;
-    -webkit-text-stroke: 0.2px white;
-    cursor: pointer;
-    transition: color 0.3s ease, -webkit-text-stroke 0.3s ease, transform 0.3s ease;
-}
-
-.interests-jobs .elements h3:hover {
-    color: white;
-    -webkit-text-stroke: 0;
-    transform: scale(1.05);
-}
-
-.interests-jobs .elements h4 {
-    font-size: 1.2rem;
-    cursor: pointer;
-    color: #fff;
-    transition: color 0.3s ease, -webkit-text-stroke 0.3s ease, transform 0.3s ease;
-    text-transform: none !important;
-}
-
-.interests-jobs .main-job {
-    font-size: 3rem;
-    color: var(--color-yellow);
-    letter-spacing: 3px;
-    margin: 2rem 0;
-    animation: pulse 4s ease-in-out infinite;
-    position: relative;
-}
-
-.interests-jobs .main-job span {
-    display: inline-block;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: letterAppear 0.5s ease forwards;
-}
-
-.interests-jobs .main-job::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 6px;
-    background-color: white;
-    border-radius: 10px;
-    animation: lineGrow 1.2s ease forwards;
-} */
-
 /* ============================= */
 /*           ABOUT ME             */
 /* ============================= */
@@ -448,7 +357,6 @@ section.about-me.active { opacity: 1; transform: translateY(0); }
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
     align-items: center;
-    /* gap: 4rem; */
 }
 
 .about-text h2 {
@@ -487,7 +395,6 @@ section.about-me.active { opacity: 1; transform: translateY(0); }
 
 .about-visual img {
     width: 300px;
-    /* filter: grayscale(100%); */
     opacity: 0.8;
     transition: transform 0.6s ease, filter 0.6s ease, opacity 0.6s ease;
 }
@@ -506,7 +413,6 @@ a.see-cv {
     width: 300px;
     border-radius: 30px;
     text-align: center;
-    /* margin: auto; */
     transition: 0.2s ease-out;
     border: 2px solid white;
 }
@@ -517,7 +423,6 @@ a.see-cv:hover {
     border: 2px solid black;
 }
 
-/* Responsive About */
 @media (max-width: 768px) {
     .about-wrapper { grid-template-columns: 1fr; text-align: center; }
     .about-text p { margin: 0 auto; }
@@ -547,7 +452,6 @@ section.projects {
 
 .projects-header p {
     font-family: var(--ff-jost);
-    /* max-width: 520px; */
     color: rgba(255, 255, 255, 0.7);
 }
 
@@ -579,7 +483,7 @@ section.projects {
     transform-style: preserve-3d;
     transition: transform 0.6s ease, box-shadow 0.6s ease, clip-path 0.6s ease;
     z-index: 1;
-    clip-path: polygon(0 0, 100% 5%, 95% 100%, 5% 95%); /* style découpé initial */
+    clip-path: polygon(0 0, 100% 5%, 95% 100%, 5% 95%); 
 }
 
 .project-card::before {
@@ -695,7 +599,7 @@ section.projects {
 /* Hover clean et glow avec rectangle arrondi */
 .project-card:hover {
     transform: translateY(-20px) rotateX(0deg) rotateY(0deg) scale(1.05);
-    clip-path: inset(0 round 28px); /* rectangle arrondi sur hover */
+    clip-path: inset(0 round 28px);
     box-shadow: 0 40px 80px rgba(0,0,0,0.45), 0 0 60px rgba(255, 255, 0, 0.15);
     z-index: 10;
 }
@@ -720,10 +624,10 @@ section.projects {
 
 /* Bouton "Voir plus de mes projets" */
 .see-more-projects {
-    display: block; /* pour pouvoir centrer avec margin auto */
+    display: block; 
     margin: 3rem auto 0;
     padding: 0.9rem 2.5rem;
-    background-color: #009DFF; /* bleu principal de ta DA */
+    background-color: #009DFF;
     color: #fff;
     font-family: var(--ff-big-title);
     font-size: 1.1rem;
@@ -737,9 +641,8 @@ section.projects {
     width: 60%;
 }
 
-/* Hover : glow subtil + légère translation */
 .see-more-projects:hover {
-    background-color: #007acc; /* bleu un peu plus foncé */
+    background-color: #007acc; 
     transform: translateY(-3px);
 }
 
@@ -748,8 +651,6 @@ section.projects {
     transform: scale(4);
     opacity: 1;
 }
-
-
 
 /* ============================= */
 /*           REVIEWS             */
@@ -887,14 +788,6 @@ section.contact.active {
     }
 }
 
-
-
-/* Glow subtil au hover pour project-card */
-.project-card:hover {
-    box-shadow: 0 20px 40px rgba(255, 255, 255, 0.1), 0 0 60px rgba(255, 255, 0, 0.15);
-    transform: translateY(-20px) rotateX(0deg) rotateY(0deg) scale(1.05);
-}
-
 button, .project-btn {
     position: relative;
     overflow: hidden;
@@ -920,7 +813,6 @@ button:active::after, .project-btn:active::after {
 
 
 /* MODAL DES PROJECTS */
-/* MODAL FULLSCREEN */
 .modal {
   display: none; /* cachée par défaut */
   position: fixed;
@@ -931,24 +823,20 @@ button:active::after, .project-btn:active::after {
   background-color: rgba(0,0,0,0.85);
   z-index: 10000;
 
-  /* centrer le contenu */
-  /* display: flex; */
   justify-content: center;
   align-items: center;
 
   padding: 2rem;
-  overflow: hidden; /* scroll interne uniquement */
+  overflow: hidden; 
 }
 
-/* Contenu de la modal */
 .modal-content {
   position: relative;
   width: 90%;
-  /* max-width: 1100px; */
   max-height: 90vh;
   background-color: #fff;
   border-radius: 20px;
-  overflow-y: auto; /* scroll interne si contenu trop grand */
+  overflow-y: auto; 
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -963,7 +851,6 @@ button:active::after, .project-btn:active::after {
   gap: 1.5rem;
 }
 
-/* Image en haut */
 .modal-content img {
   width: 80%;
   height: 400px;
@@ -974,21 +861,16 @@ button:active::after, .project-btn:active::after {
 
 /* Texte */
 .modal-text {
-  /* padding: 1rem 3rem; */
-  /* display: flex;
-  flex-direction: column;
-  gap: 0.5rem; */
   width: 80%;
 }
 
 #modal-tag {
-  /* display: inline-block; */
   font-size: 0.8rem;
   font-weight: bold;
   text-transform: uppercase;
   padding: 0.2rem 0.6rem;
   border-radius: 8px;
-  background-color: #FFD700; /* jaune */
+  background-color: #FFD700;
   color: #0b1620;
 }
 
@@ -1005,13 +887,11 @@ button:active::after, .project-btn:active::after {
   color: #333;
 }
 
-/* Bouton dans modal */
 #modal-btn {
   margin-top: 1rem;
   align-self: flex-start;
 }
 
-/* Croix de fermeture */
 .modal-close {
   position: fixed;
   top: 1rem;

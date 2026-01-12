@@ -10,31 +10,6 @@
     }
 }
 
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-@keyframes lineGrow {
-    to {
-        width: 120px;
-    }
-}
-
-@keyframes letterAppear {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 @keyframes rotatePlus {
     from {
         transform: rotate(0deg);
@@ -44,45 +19,44 @@
     }
 }
 
-/* @keyframes diagonalGradient {
-    0% {
-        background-position: 0% 0%;
-    }
-    50% {
-        background-position: 100% 100%;
-    }
-    100% {
-        background-position: 0% 0%; 
-    }
-} */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
 
-@keyframes gradientAppear {
-    0% {
-        opacity: 0; /* couleur pleine */
-        background-position: 0% 0%;
-    }
+@keyframes loaderLine {
+    0% { width: 0; }
+    100% { width: 140px; }
+}
 
-    25% {
-        opacity: 1; /* gradient présent */
-        background-position: 100% 100%;
+@keyframes loaderFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
     }
-
-    60% {
-        opacity: 1; /* encore visible */
-    }
-
-    100% {
-        opacity: 0; /* retour couleur pleine + PAUSE */
-        background-position: 0% 0%;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
+@keyframes loaderText {
+    from {
+        opacity: 0;
+        letter-spacing: 8px;
+    }
+    to {
+        opacity: 1;
+        letter-spacing: 4px;
+    }
+}
 
 /* Keyframes : couleur pleine qui prend tout */
 @keyframes bgCycle {
-    0%   { background-color: #009DFF; } /* bleu */
-    25%  { background-color: #EF1367; } /* rose plein */
-    50%  { background-color: #EF1367; } /* rose plein */
-    70% { background-color: #009DFF; } /* retour bleu */
-    100% { background-color: #009DFF; } /* retour bleu */
+    0%   { background-color: #009DFF; } 
+    25%  { background-color: #EF1367; } 
+    50%  { background-color: #EF1367; } 
+    70% { background-color: #009DFF; } 
+    100% { background-color: #009DFF; } 
 }
