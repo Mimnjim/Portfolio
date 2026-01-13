@@ -53,10 +53,11 @@ a {
 
 
 .projects-wrapper h2 {
-    font-size: 2rem;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
     font-weight: bold;
     position: relative;
-    margin: 4rem 8rem 1rem 8rem;
+    width: fit-content;
+    margin: clamp(2rem, 5vw, 4rem) auto 1rem;
     background: linear-gradient(90deg, #009DFF, #EF1367, #009DFF);
     background: black;
     -webkit-background-clip: text;
@@ -106,7 +107,7 @@ a {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     padding: 4rem 2rem;
     margin: 0 5rem;
@@ -202,27 +203,71 @@ a {
     transform: translateY(-2px);
 }
 
-
-@media(max-width: 1024px){
-    .projects-hero h1 {
-        font-size: 2.8rem;
+@media (max-width: 1200px) {
+    .projects-grid {
+        margin: 0 3rem;
+        gap: 1.8rem;
     }
-    .projects-hero p {
-        font-size: 1.1rem;
+
+    .projects-wrapper h2 {
+        margin: 3rem 3rem 1rem;
     }
 }
 
-@media(max-width: 768px){
+@media (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 2rem;
+        padding: 3rem 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        margin: 0 1.5rem;
+        padding: 2.5rem 1rem;
+    }
+
     .projects-hero h1 {
         font-size: 2.4rem;
     }
+
     .projects-hero p {
         font-size: 1rem;
     }
+}
 
+@media (max-width: 480px) {
     .projects-grid {
-        grid-template-columns: 1fr;
-        padding: 2rem;
-        gap: 1.5rem;
+        margin: 0 1rem;
+        gap: 1.2rem;
+    }
+
+    .project-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .project-content p {
+        font-size: 0.95rem;
+    }
+
+    .project-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .projects-hero {
+        padding: 6rem 1rem 3rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .projects-hero h1 {
+        font-size: 2rem;
+    }
+
+    .projects-wrapper h2 {
+        font-size: 1.6rem;
     }
 }

@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById('project-modal');
   const modalClose = modal ? modal.querySelector('.modal-close') : null;
 
-  function truncateText(text, maxLength = 150) {
+  function truncateText(text, maxLength = 100) {
     return text.length > maxLength ? text.slice(0, maxLength) + "…" : text;
   }
 
@@ -138,12 +138,14 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch('json/projects.json')
       .then(res => res.json())
       .then(projects => {
-        projects.forEach(p => {
+        projects.slice(0, 5).forEach(p => {
           const wrapper = document.createElement('div');
           wrapper.classList.add('project-card-wrapper');
           wrapper.innerHTML = `
             <article class="project-card">
-              <div class="project-media"><img src="${p.image}" alt="${p.title}"></div>
+              <div class="project-media">
+                <img src="${p.image}" alt="${p.title}">
+              </div>
               <div class="project-content">
                 <span class="project-tag">${p.tag}</span>
                 <h3>${p.title}</h3>
@@ -174,7 +176,8 @@ document.addEventListener("DOMContentLoaded", () => {
             updateTransform(wrapper);
           });
 
-          wrapper.querySelector('.project-btn').addEventListener('click', () => openModal(p));
+          wrapper.querySelector('.project-btn')
+            .addEventListener('click', () => openModal(p));
         });
       });
   }

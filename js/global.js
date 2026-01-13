@@ -14,6 +14,15 @@ burger.addEventListener('click', () => {
     }
 });
 
+const navItems = document.querySelectorAll('.nav-links a');
+
+navItems.forEach(link => {
+    link.addEventListener('click', () => {
+        burger.classList.remove('active');
+        navLinks.classList.remove('open');
+        document.body.style.overflow = '';
+    });
+});
 // LOADING
 
 document.addEventListener("DOMContentLoaded", () => {

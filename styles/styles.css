@@ -589,6 +589,7 @@ section.reviews.active { opacity: 1; transform: translateY(0); }
     border-radius:28px;
     position:relative;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border: 2px solid #000;
 }
 .review-card::before {
     content:'“';
@@ -825,6 +826,7 @@ button:active::after, .project-btn:active::after {
 
     .about-wrapper {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
     a.see-cv {
@@ -858,6 +860,9 @@ button:active::after, .project-btn:active::after {
 /*       PETIT TABLETTE (≤ 900px)*/
 /* ----------------------------- */
 @media (max-width: 900px) {
+
+
+
     .skills-wrapper h2 {
         text-align: center;
         align-items: center;
@@ -1010,6 +1015,11 @@ button:active::after, .project-btn:active::after {
 /*       PETIT MOBILE (≤ 480px)  */
 /* ----------------------------- */
 @media (max-width: 480px) {
+    .project-card h3 {
+        font-size: 1.2rem;
+        margin: 0;
+    }
+
     header h1 {
         font-size: clamp(2rem, 8vw, 3rem);
     }
