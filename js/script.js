@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
               </div>
               <div class="project-content">
                 <span class="project-tag">${p.tag}</span>
-                <h3>${p.title}</h3>
+                <h2>${p.title}</h2>
                 <p>${truncateText(p.overview)}</p>
                 <button class="project-btn">Voir le projet</button>
               </div>
