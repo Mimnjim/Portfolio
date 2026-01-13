@@ -60,6 +60,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const jobText = "Développeur web";
   let i = 0;
 
+  if(jobTitle) jobTitle.textContent = ""; // <-- vider le texte au début
+
+
   function typeWriter() {
     if(!jobTitle) return;
     if (i < jobText.length) {
