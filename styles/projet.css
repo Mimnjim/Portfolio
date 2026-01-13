@@ -217,7 +217,7 @@ main section {
     .project-main {
         flex-direction: column-reverse;
         gap: 2rem;
-        padding: 0 1.5rem;
+        padding: 0 4rem;
     }
 
     .project-intro, 
@@ -233,25 +233,27 @@ main section {
 
     .project-intro p {
         font-size: 1rem;
-        text-align: justify;
     }
 
     .project-image img {
         width: 100%;
         max-width: 100%;
         height: auto;
+        max-height: 300px;
     }
 
     .project-meta {
         flex-direction: column;
-        text-align: center;
+        /* text-align: center; */
         gap: 1.2rem;
+        padding: 0 4rem;
+
     }
 
     .project-meta .meta-item {
         font-size: 1rem;
         padding: 0.2rem 0;
-        text-align: center;
+        /* text-align: center; */
     }
 
     .project-meta .meta-item strong {
@@ -324,6 +326,13 @@ main section {
 /*  MICRO MOBILE (≤ 360px)       */
 /* ----------------------------- */
 @media (max-width: 360px) {
+    .project-image img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        max-height: 500px;
+    }
+
     .project-header h1 {
         font-size: 1.8rem;
     }
@@ -341,8 +350,22 @@ main section {
         line-height: 1.5;
     }
 
+    .project-meta {
+        padding: 0 4rem;
+    }
+
     .project-meta .meta-item strong {
         font-size: 1rem;
+    }
+
+    .project-meta .meta-item {
+        font-size: 0.9rem;
+        padding: 0.2rem 0;
+        /* text-align: center; */
+    }
+
+    .project-extra {
+        padding: 0 4rem;
     }
 
     .project-extra h3 {
