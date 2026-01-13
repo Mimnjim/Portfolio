@@ -137,16 +137,16 @@
             if(!p) return;
 
             // Injecter les données
-            document.getElementById('project-title').textContent = p.title;
-            document.getElementById('project-tag').textContent = p.tag;
+            document.getElementById('project-title').innerHTML = p.title;
+            document.getElementById('project-tag').innerHTML = p.tag;
             document.getElementById('project-image').src = p.image;
             document.getElementById('project-image').alt = p.title;
-            document.getElementById('project-overview').textContent = p.overview;
-            document.getElementById('project-overview2').textContent = p.overview2;
-            document.getElementById('project-dates').textContent = p.dates;
-            document.getElementById('project-skills').textContent = p.skills;
-            document.getElementById('project-context').textContent = p.context;
-            document.getElementById('project-software').textContent = p.software;
+            document.getElementById('project-overview').innerHTML = p.overview;
+            document.getElementById('project-overview2').innerHTML = p.overview2;
+            document.getElementById('project-dates').innerHTML = p.dates;
+            document.getElementById('project-skills').innerHTML = p.skills;
+            document.getElementById('project-context').innerHTML = p.context;
+            document.getElementById('project-software').innerHTML = p.software;
             document.getElementById('project-link-btn').onclick = () => window.open(p.link, "_blank");
         });
     </script>

@@ -112,14 +112,14 @@ document.addEventListener("DOMContentLoaded", () => {
   function openModal(p) {
     if(!modal) return;
     document.getElementById('modal-image').src = p.image;
-    document.getElementById('modal-tag').textContent = p.tag;
-    document.getElementById('modal-title').textContent = p.title;
+    document.getElementById('modal-tag').innerHTML = p.tag;
+    document.getElementById('modal-title').innerHTML = p.title;
     document.getElementById('modal-overview').innerHTML = p.overview;
     document.getElementById('modal-overview2').innerHTML = p.overview2;
-    document.getElementById('modal-dates').textContent = p.dates;
-    document.getElementById('modal-skills').textContent = p.skills;
-    document.getElementById('modal-software').textContent = p.software;
-    document.getElementById('modal-context').textContent = p.context;
+    document.getElementById('modal-dates').innerHTML = p.dates;
+    document.getElementById('modal-skills').innerHTML = p.skills;
+    document.getElementById('modal-software').innerHTML = p.software;
+    document.getElementById('modal-context').innerHTML = p.context;
     document.getElementById('modal-btn').onclick = () => window.open(p.link, '_blank');
     modal.style.display = 'flex';
     document.body.style.overflow = 'hidden';

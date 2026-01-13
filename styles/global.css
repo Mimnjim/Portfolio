@@ -96,6 +96,7 @@ body {
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #0b1620; 
+    text-decoration: none;
 }
 
 .nav-links a::after {

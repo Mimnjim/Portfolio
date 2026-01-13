@@ -154,7 +154,7 @@ main section {
 }
 
 .project-extra p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.7;
     color: #444;
     margin-bottom: 0.8rem;
@@ -267,7 +267,7 @@ main section {
     }
 
     .project-extra p {
-        font-size: 0.95rem;
+        font-size: 1rem;
     }
 
     #project-link-btn {
@@ -311,7 +311,7 @@ main section {
     }
 
     .project-extra p {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
     }
 
     #project-link-btn {
@@ -350,7 +350,7 @@ main section {
     }
 
     .project-extra p {
-        font-size: 0.85rem;
+        font-size: 0.9rem;
     }
 
     #project-link-btn {
