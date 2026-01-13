@@ -861,13 +861,6 @@ button:active::after, .project-btn:active::after {
 /* ----------------------------- */
 @media (max-width: 900px) {
 
-
-
-    .skills-wrapper h2 {
-        text-align: center;
-        align-items: center;
-    }
-
     .skills-columns {
         grid-template-columns: 1fr;
         gap: 2.5rem;
