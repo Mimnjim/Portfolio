@@ -668,21 +668,7 @@ section.contact.active {
     color: rgba(255,255,255,0.6);
 }
 
-.mail-link {
-    font-family: var(--ff-big-title);
-    font-size: clamp(1.6rem, 3vw, 2.2rem);
-    color: transparent;
-    -webkit-text-stroke: 0.5px white;
-    text-decoration: none;
-    letter-spacing: 1px;
-    transition: color 0.3s ease, -webkit-text-stroke 0.3s ease, transform 0.3s ease;
-}
 
-.mail-link:hover {
-    color: var(--color-yellow);
-    -webkit-text-stroke: 0;
-    transform: scale(1.05);
-}
 
 button, .project-btn {
     position: relative;

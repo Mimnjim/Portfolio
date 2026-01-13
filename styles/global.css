@@ -171,6 +171,23 @@ footer {
     color:var(--primary-color); 
 }
 
+.mail-link {
+    font-family: var(--ff-big-title);
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    color: transparent;
+    -webkit-text-stroke: 0.5px white;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, -webkit-text-stroke 0.3s ease, transform 0.3s ease;
+}
+
+.mail-link:hover {
+    color: var(--color-yellow);
+    -webkit-text-stroke: 0;
+    transform: scale(1.05);
+}
+
+
 /* ============================= */
 /*            LOADER             */
 /* ============================= */
@@ -477,6 +494,10 @@ footer {
         font-size: 0.75rem;
     }
 
+    .mail-link {
+        font-size: 1rem;
+    }
+
     #loader .loader-content h1 {
         font-size: clamp(1.5rem, 6vw, 2.5rem);
     }
@@ -519,8 +540,12 @@ footer {
         font-size: 0.7rem;
     }
 
+    .mail-link {
+        font-size: 0.8rem;
+    }
+
     #loader .loader-content h1 {
-        font-size: clamp(1.2rem, 6vw, 2rem);
+        font-size: 0.8rem;
     }
 
     .loader-content p {
