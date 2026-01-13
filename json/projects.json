@@ -10,7 +10,7 @@
     "software": "HTML, CSS, JavaScript / PHP / MySQL",
     "context": "Le projet a été réalisé seul, dans un cadre universitaire, à partir des cours d’intégration web et de développement web, où nous avons appris à utiliser HTML, CSS, JavaScript et à manipuler des bases de données avec MySQL et PHP.",
     "link": "https://webinventory.te.projetsmmichamps.fr",
-    "image": "images/Projets/SAE_203_-_WebInventory.png"
+    "image": "images/Projets/SAE_203_-_WebInventory.webp"
   },
   {
     "id": 2,
@@ -23,7 +23,7 @@
     "software": "HTML, CSS, JavaScript, JSON",
     "context": "Ce projet, qui a été réalisé seul, s’inscrit dans le cadre universitaire, avec pour objectif de mettre en pratique les connaissances acquises lors des cours et des travaux pratiques. ",
     "link": "https://te.projetsmmichamps.fr/sae105/",
-    "image": "images/Projets/SAE_105_-_Echo_Music.png"
+    "image": "images/Projets/SAE_105_-_Echo_Music.webp"
   },
   {
     "id": 3,
@@ -36,7 +36,7 @@
     "software": "HTML, CSS, JavaScript, Chart.js",
     "context": "Projet universitaire, réalisé en binôme, visant à créer un site web interactif pour suivre et visualiser les écoutes musicales.",
     "link": "https://mmi-projets.github.io/Staytistics/",
-    "image": "images/Projets/SAE_303_-_Staytistics.png"
+    "image": "images/Projets/SAE_303_-_Staytistics.webp"
   },
   {
     "id": 4,
@@ -49,7 +49,7 @@
     "software": "HTML, CSS, PHP, MySQL, Javascript",
     "context": "Projet universitaire, réalisé seul, visant à créer un blog fonctionnel pour partager des expériences et activités locales.",
     "link": "https://tp4-5-php.te.projetsmmichamps.fr/index.php",
-    "image": "images/Projets/Projet_PHP_-_En_Vadrouille.png"
+    "image": "images/Projets/Projet_PHP_-_En_Vadrouille.webp"
   },
   {
     "id": 5,
@@ -62,7 +62,7 @@
     "software": "Premiere Pro, After Effects, Audition / Reaper, caméra, stabilisateur Osmo.",
     "context": "Projet universitaire réalisé en groupe pour le tournage et individuellement pour le montage, ayant pour objectif d’explorer la narration audiovisuelle à travers le contraste entre réalité et fiction, en mettant le son au cœur du dispositif narratif.",
     "link": "https://youtu.be/kAsLaGKIKrU",
-    "image": "images/Projets/SAE3.02_-_Court_metrage.png"
+    "image": "images/Projets/SAE3.02_-_Court_metrage.webp"
   },
   {
     "id": 6,
@@ -75,7 +75,7 @@
     "software": "Photoshop",
     "context": "Projet universitaire individuel, réalisé dans le cadre d’un cours sur les enjeux des IA génératives, se concentrant sur la communication visuelle pour produire une affiche informative et esthétique.",
     "link": "images/Projets/Affiche_-_Les_Enjeux_des_IA_Generatives.jpg",
-    "image": "images/Projets/Affiche_-_Les_Enjeux_des_IA_Generatives.jpg"
+    "image": "images/Projets/Affiche_-_Les_Enjeux_des_IA_Generatives.webp"
   },
     {
     "id": 7,
@@ -88,7 +88,7 @@
     "software": "Figma, HTML, CSS, JavaScript, PHP, MySQL, Looping",
     "context": "Projet universitaire réalisé en équipe, visant à concevoir une expérience utilisateur complète autour de la découverte culinaire. Le projet a permis d’appliquer des compétences en design, développement et gestion de projet, tout en respectant les standards web et les bonnes pratiques Opquast, avec un hébergement en ligne et un nom de domaine dédié.",
     "link": "https://au-hasard-des-saveurs.acfiol.fr/",
-    "image": "images/Projets/SAE_301_-_Au_Hasard_des_Saveurs.png"
+    "image": "images/Projets/SAE_301_-_Au_Hasard_des_Saveurs.webp"
   },
   {
     "id": 8,
@@ -101,7 +101,7 @@
     "software": "Adobe Premiere Pro, Adobe Audition, caméra, micro, éclairage, trépied",
     "context": "Projet universitaire réalisé en groupe, ayant pour objectif de comprendre et présenter le fonctionnement d’une rédaction d’information à travers une interview. L’expérience a permis de combiner travail technique, préparation en amont et communication avec un professionnel, tout en mettant en valeur les apprentissages liés à l’audiovisuel et à la langue anglaise.",
     "link": "https://youtu.be/clxwBRrWQ3I",
-    "image": "images/Projets/SAE1.04_-_Interview.png"
+    "image": "images/Projets/SAE1.04_-_Interview.webp"
   },
   {
     "id": 9,
@@ -114,7 +114,7 @@
     "software": "WordPress, Figma, Photoshop, Illustrator",
     "context": "Projet réalisé en groupe avec pour objectif de moderniser la communication digitale d’une association culturelle et scientifique. Le projet impliquait la conception, le développement et l’optimisation d’un site web pour améliorer la visibilité, l’expérience utilisateur et la gestion des contenus, tout en respectant la direction artistique et l’identité de l’association.",
     "link": "https://artsciencefactory.lin.projetsmmichamps.fr/",
-    "image": "images/Projets/SAE_2.02_-_Projet_Citoyen_-_Art_Science_Factory.png"
+    "image": "images/Projets/SAE_2.02_-_Projet_Citoyen_-_Art_Science_Factory.webp"
   },
     {
     "id": 10,
@@ -127,6 +127,6 @@
     "software": "Adobe InDesign, Photoshop",
     "context": "Projet individuel visant à concevoir un livret de présentation du film Interstellar, avec analyse filmique, présentation des personnages et mise en page optimisée pour écran et impression.",
     "link": "docs/ecran-Livret.pdf",
-    "image": "images/Projets/SAE_1.04_-_Livret_de_presentation.png"
+    "image": "images/Projets/SAE_1.04_-_Livret_de_presentation.webp"
   }
 ]
