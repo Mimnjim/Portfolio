@@ -99,7 +99,6 @@ main {
     display: flex;
     flex-direction: column;
 }
-
 /* ============================= */
 /*            SKILLS             */
 /* ============================= */
@@ -268,12 +267,12 @@ section.about-me {
     background-color: white;
     padding: 8rem 2rem;
     overflow: hidden;
-    opacity: 0;
+    /* opacity: 0;
     transform: translateY(60px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    transition: opacity 0.8s ease, transform 0.8s ease; */
 }
 
-section.about-me.active { opacity: 1; transform: translateY(0); }
+/* section.about-me.active { opacity: 1; transform: translateY(0); } */
 
 .about-wrapper {
     max-width: 1100px;
@@ -339,6 +338,7 @@ a.see-cv {
     text-align: center;
     transition: 0.2s ease-out;
     border: 2px solid white;
+    margin-top: 30px;
 }
 
 a.see-cv:hover {
@@ -410,9 +410,9 @@ section.projects {
     inset: 0;
     border-radius: inherit;
     background: rgba(255, 255, 0, 0.15);
-    opacity: 0;
+    /* opacity: 0; */
     pointer-events: none;
-    transition: opacity 0.4s ease, transform 0.4s ease;
+    /* transition: opacity 0.4s ease, transform 0.4s ease; */
 }
 
 .project-card:hover::before {
@@ -564,11 +564,12 @@ section.projects {
 section.reviews {
     background-color: white;
     padding: 8rem 2rem;
-    opacity: 0;
+
+    /* opacity: 0;
     transform: translateY(60px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    transition: opacity 0.8s ease, transform 0.8s ease;  */
 }
-section.reviews.active { opacity: 1; transform: translateY(0); }
+/* section.reviews.active { opacity: 1; transform: translateY(0); } */
 
 .reviews-header { max-width: 1100px; margin: 0 auto 5rem; }
 .reviews-header h2 { font-family: var(--ff-big-title); font-size: clamp(2.5rem,4vw,3.5rem); margin-bottom:1rem; }
@@ -591,6 +592,18 @@ section.reviews.active { opacity: 1; transform: translateY(0); }
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     border: 2px solid #000;
 }
+
+.review-card {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+[data-aos].aos-animate {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
 .review-card::before {
     content:'“';
     position:absolute;
@@ -617,15 +630,15 @@ section.contact {
     background-color: #0b1620;
     color: white;
     padding: 4rem 2rem;
-    opacity: 0;
+    /* opacity: 0;
     transform: translateY(60px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    transition: opacity 0.8s ease, transform 0.8s ease; */
 }
 
-section.contact.active {
+/* section.contact.active {
     opacity: 1;
     transform: translateY(0);
-}
+} */
 
 .contact-container {
     max-width: 800px;

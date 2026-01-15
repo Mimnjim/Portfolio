@@ -144,6 +144,11 @@ document.addEventListener("DOMContentLoaded", () => {
         projects.slice(0, 5).forEach(p => {
           const wrapper = document.createElement('div');
           wrapper.classList.add('project-card-wrapper');
+
+          // AOS
+          wrapper.setAttribute('data-aos', 'fade-up');
+          wrapper.setAttribute('data-aos-delay', projects.indexOf(p) * 100);
+
           wrapper.innerHTML = `
             <article class="project-card">
               <div class="project-media">
@@ -182,6 +187,8 @@ document.addEventListener("DOMContentLoaded", () => {
           wrapper.querySelector('.project-btn')
             .addEventListener('click', () => openModal(p));
         });
+
+        AOS.refresh();
       });
   }
 
