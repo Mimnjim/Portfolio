@@ -256,7 +256,7 @@ section.skills h1 span { color: var(--color-yellow); }
 .specialty span {
     font-family: var(--ff-jost);
     font-size: 0.95rem;
-    color: rgba(255,255,255,0.55);
+    color: rgba(255,255,255,0.85);
     letter-spacing: 0.3px;
 }
 
