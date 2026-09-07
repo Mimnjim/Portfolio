@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Projets — TE Jimmy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/Favicon-TE_Jimmy.png"/>
+
+    <!-- CSS global -->
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/projets.css">
+    <link rel="stylesheet" href="styles/animations.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Jockey+One&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="loader">
+        <div class="loader-content">
+            <h1>Jimmy<span>.</span></h1>
+            <div class="loader-line"></div>
+            <p>Portfolio - Développeur web</p>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <a href="index.html" class="nav-logo">TE JIMMY</a>
+
+        <!-- Burger -->
+        <button class="burger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-links">
+            <li class="mobile-home">
+                <a href="index.html" class="mobile-logo">TE JIMMY</a>
+            </li>
+            <li><a href="index.html#about-me">À propos</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <header class="projects-hero nav-light">
+        <h1>Projets<span>.</span></h1>
+        <p>Un parcours créatif mêlant développement, design et interaction.</p>
+    </header>
+
+    <!-- MAIN -->
+    <main class="projects-wrapper">
+        <!-- Filtres -->
+        <div class="projects-filters">
+            <button data-filter="All" class="active">Tous</button>
+            <button data-filter="Web">Web</button>
+            <button data-filter="Vidéo">Vidéo</button>
+            <button data-filter="Création">Création</button>
+        </div>
+
+        <div id="projects-grid" class="projects-grid">
+            <!-- Les cards seront injectées ici via JS -->
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>TE Jimmy</h3>
+                <p>Développeur web & Designer</p>
+            </div>
+
+            <div class="footer-center">
+                <p>© 2025 TE Jimmy. Tous droits réservés.</p>
+            </div>
+
+            <div class="footer-right">
+                <a href="mailto:jimmy@example.com" class="footer-link">Email</a>
+                <a href="https://www.linkedin.com/in/jimmy" target="_blank" class="footer-link">LinkedIn</a>
+                <a href="https://github.com/Mimnjim" target="_blank" class="footer-link">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/global.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const loader = document.getElementById("loader");
+            const hasVisited = localStorage.getItem("visited");
+
+            if (!hasVisited) {
+                loader.style.display = "flex";
+                window.addEventListener("load", () => {
+                    setTimeout(() => {
+                        loader.classList.add("hidden");
+                        localStorage.setItem("visited", "true"); 
+                    }, 1800); 
+                });
+            } else {
+                loader.style.display = "none";
+            }
+        });
+
+        // ==========================
+        // PROJECTS GRID + FILTERS
+        // ==========================
+        const projectsGrid = document.getElementById('projects-grid');
+        const filters = document.querySelectorAll('.projects-filters button');
+
+        function truncateText(text, maxLength = 90) {
+            return text.length > maxLength ? text.slice(0,maxLength)+'…' : text;
+        }
+
+        let allProjects = [];
+
+        // Charger projets JSON
+        fetch('json/projects.json')
+        .then(res => res.json())
+        .then(projects => {
+            allProjects = projects;
+            displayProjects(allProjects);
+        });
+
+        function displayProjects(projectsArray) {
+            projectsGrid.innerHTML = "";
+
+            projectsArray.forEach((p, index) => {
+                const wrapper = document.createElement('div');
+                wrapper.classList.add('project-card-wrapper');
+                wrapper.innerHTML = `
+                    <article class="project-card">
+                        <div class="project-media">
+                            <img src="${p.image}" loading="lazy" alt="${p.title}">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-tag">${p.tag}</span>
+                            <h3>${p.title}</h3>
+                            <p>${truncateText(p.overview)}</p>
+                            <button class="project-btn">Voir le projet</button>
+                        </div>
+                    </article>
+                `;
+                projectsGrid.appendChild(wrapper);
+
+                // Fade-in progressif
+                setTimeout(() => {
+                    wrapper.classList.add('show');
+                }, index * 100);
+
+                const card = wrapper.querySelector('.project-card');
+
+                // Hover 3D
+                wrapper.addEventListener('mousemove', e => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const rotateX = ((y / rect.height) - 0.5) * 8;
+                    const rotateY = ((x / rect.width) - 0.5) * -8;
+                    wrapper.style.zIndex = 9999;
+                    card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+                });
+
+                wrapper.addEventListener('mouseleave', () => {
+                    wrapper.style.zIndex = 1;
+                    card.style.transform = 'rotateX(0deg) rotateY(0deg)';
+                });
+
+                // Redirection vers page projet
+                wrapper.querySelector('.project-btn').addEventListener('click', () => {
+                    window.location.href = `projet.html?id=${p.id}`;
+                });
+            });
+        }
+
+        // ==========================
+        // FILTERS CLICK
+        // ==========================
+        filters.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filters.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.dataset.filter;
+
+                if(filter === "All") {
+                    displayProjects(allProjects);
+                } else {
+                    const filtered = allProjects.filter(p => p.tag === filter);
+                    displayProjects(filtered);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

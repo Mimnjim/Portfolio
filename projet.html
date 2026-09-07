@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Projet — TE Jimmy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/Favicon-TE_Jimmy.png"/>
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/projet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Jockey+One&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="loader">
+        <div class="loader-content">
+            <h1>Jimmy<span>.</span></h1>
+            <div class="loader-line"></div>
+            <p>Portfolio - Développeur web</p>
+        </div>
+    </div>
+    
+    <nav class="main-nav">
+        <a href="index.html" class="nav-logo">TE JIMMY</a>
+
+        <!-- Burger -->
+        <button class="burger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-links">
+            <li class="mobile-home">
+                <a href="index.html" class="mobile-logo">TE JIMMY</a>
+            </li>
+            <li><a href="index.html#about-me">À propos</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="project-page">
+
+        <!-- HEADER -->
+        <header class="project-header">
+            <h1 id="project-title"></h1>
+            <span id="project-tag"></span>
+        </header>
+
+        <!-- SECTION PRINCIPALE -->
+        <section class="project-main">
+
+            <!-- Présentation -->
+            <div class="project-intro">
+                <h2>Présentation du projet</h2>
+                <p id="project-overview"></p>
+            </div>
+
+            <!-- Image -->
+            <div class="project-image">
+                <img id="project-image" src="" alt="">
+            </div>
+
+        </section>
+
+        <!-- META INFO -->
+        <section class="project-meta">
+            <div class="meta-item">
+                <strong>Dates :</strong> <span id="project-dates"></span>
+            </div>
+            <div class="meta-item">
+                <strong>Compétences :</strong> <span id="project-skills"></span>
+            </div>
+            <div class="meta-item">
+                <strong>Contexte :</strong> <span id="project-context"></span>
+            </div>
+        </section>
+
+        <!-- INFORMATIONS SUPPLÉMENTAIRES -->
+        <section class="project-extra">
+            <h3>Informations supplémentaires</h3>
+            <p id="project-overview2"></p>
+            <p><strong>Logiciels utilisés :</strong> <span id="project-software"></span></p>
+            <button id="project-link-btn">Voir le projet</button>
+        </section>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>TE Jimmy</h3>
+                <p>Développeur web & Designer</p>
+            </div>
+
+            <div class="footer-center">
+                <p>© 2025 TE Jimmy. Tous droits réservés.</p>
+            </div>
+
+            <div class="footer-right">
+                <a href="mailto:jimmy@example.com" class="footer-link">Email</a>
+                <a href="https://www.linkedin.com/in/jimmy" target="_blank" class="footer-link">LinkedIn</a>
+                <a href="https://github.com/Mimnjim" target="_blank" class="footer-link">GitHub</a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/global.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const loader = document.getElementById("loader");
+            const hasVisited = localStorage.getItem("visited");
+
+            if (!hasVisited) {
+                loader.style.display = "flex"; 
+
+                window.addEventListener("load", () => {
+                    setTimeout(() => {
+                        loader.classList.add("hidden");
+                        localStorage.setItem("visited", "true"); 
+                    }, 1800); 
+                });
+            } else {
+                
+                loader.style.display = "none";
+            }
+        });
+
+        const params = new URLSearchParams(window.location.search);
+        const projectId = params.get("id");
+
+        fetch('json/projects.json')
+        .then(res => res.json())
+        .then(projects => {
+            const p = projects.find(proj => proj.id == projectId);
+            if(!p) return;
+
+            // Injecter les données
+            document.getElementById('project-title').innerHTML = p.title;
+            document.getElementById('project-tag').innerHTML = p.tag;
+            document.getElementById('project-image').src = p.image;
+            document.getElementById('project-image').alt = p.title;
+            document.getElementById('project-overview').innerHTML = p.overview;
+            document.getElementById('project-overview2').innerHTML = p.overview2;
+            document.getElementById('project-dates').innerHTML = p.dates;
+            document.getElementById('project-skills').innerHTML = p.skills;
+            document.getElementById('project-context').innerHTML = p.context;
+            document.getElementById('project-software').innerHTML = p.software;
+            document.getElementById('project-link-btn').onclick = () => window.open(p.link, "_blank");
+        });
+    </script>
+</body>
+</html>
