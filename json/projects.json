@@ -193,5 +193,18 @@
     "context": "Réalisation professionnelle effectuée durant mon stage chez AZApp pour concevoir le site vitrine d’EGV Bâtiment, avec pour objectif de présenter ses prestations, ses réalisations et son savoir-faire tout en facilitant la prise de contact.",
     "link": "https://egv.devazapp.fr/",
     "image": "images/Projets/EGV-Batiment-Wordpress.png"
+  },
+  {
+    "id": 16,
+    "title": "SEUR Sérigraphie Broderie – Refonte du site",
+    "tag": "Web",
+    "overview": "Dans le cadre d’un projet réalisé pour une entreprise de mon entourage, j’ai conçu la refonte du site internet de SEUR Sérigraphie Broderie, spécialisée dans le marquage textile professionnel. L’objectif était de moderniser et actualiser le site existant afin de proposer une présentation plus claire, actuelle et adaptée aux besoins de l’entreprise.",
+    "overview2": "J’ai repensé l’organisation des contenus et l’expérience de navigation afin de mieux mettre en avant les différents services proposés : broderie, sérigraphie, transfert et flocage. Le site présente également les réalisations de l’entreprise, ses catalogues, son savoir-faire et un formulaire de demande de devis. J’ai entièrement développé cette nouvelle version en HTML, CSS et JavaScript, avec une attention particulière portée au responsive design, à la structuration des pages et à la mise en valeur de l’identité de l’entreprise.",
+    "dates": "2026 – Projet de refonte",
+    "skills": "HTML, CSS, JavaScript, conception web, refonte de site, responsive design, intégration web, UX/UI, structuration de contenu, navigation.",
+    "software": "Visual Studio Code",
+    "context": "Projet de refonte réalisé pour une entreprise de mon entourage afin de moderniser et actualiser son site internet. Le projet a consisté à repenser la structure, l’interface et les contenus, puis à développer la nouvelle version du site en HTML, CSS et JavaScript.",
+    "link": "https://mimnjim.github.io/seur-refonte",
+    "image": "images/Projets/SEUR-Serigraphie-Broderie.png"
   }
 ]
