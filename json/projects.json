@@ -206,5 +206,18 @@
     "context": "Projet de refonte réalisé pour une entreprise de mon entourage afin de moderniser et actualiser son site internet. Le projet a consisté à repenser la structure, l’interface et les contenus, puis à développer la nouvelle version du site en HTML, CSS et JavaScript.",
     "link": "https://mimnjim.github.io/seur-refonte",
     "image": "images/Projets/SEUR-Serigraphie-Broderie.png"
+  }, 
+  {
+    "id": 17,
+    "title": "Au-delà de l'humain – Exposition immersive",
+    "tag": "Web",
+    "overview": "Dans le cadre d’un projet scolaire réalisé en groupe, nous avons conçu « Au-delà de l’humain », une exposition immersive fictive consacrée aux univers d’Akira et de Ghost in the Shell. L’objectif était de créer une expérience numérique originale permettant de présenter l’exposition, son univers graphique et les différentes expériences proposées aux visiteurs.",
+    "overview2": "Le projet associe développement web, narration interactive et 3D JavaScript afin de proposer une expérience plus immersive qu’un site classique. Nous avons conçu plusieurs espaces permettant de découvrir l’exposition, ses œuvres et ses contenus, ainsi qu’une expérience interactive sous forme de jeu. Le site intègre également des podcasts, une vidéo de présentation, un système de réservation fictif et différentes pages d’informations. Ce projet m’a permis de développer mes compétences en JavaScript, en conception d’expériences interactives et en travail d’équipe, tout en travaillant sur la création d’un univers cohérent autour de deux œuvres majeures de la culture manga et cyberpunk.",
+    "dates": "2026 – Projet scolaire – BUT MMI",
+    "skills": "HTML, CSS, JavaScript, THREE.JS, développement interactif, conception web, UX/UI, expérience utilisateur, narration interactive, travail en équipe.",
+    "software": "Visual Studio Code",
+    "context": "Projet scolaire réalisé en groupe visant à concevoir une exposition immersive fictive autour des univers d’Akira et de Ghost in the Shell. Le projet combine site web, contenus multimédias, expérience interactive et jeu en 3D JavaScript.",
+    "link": "https://audeladelhumain.fr/",
+    "image": "images/Projets/Au-dela-de-l-humain.png"
   }
 ]
