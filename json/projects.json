@@ -26,19 +26,6 @@
     "image": "images/Projets/SAE_105_-_Echo_Music.webp"
   },
   {
-    "id": 3,
-    "title": "Staytistics",
-    "tag": "Web",
-    "overview": "Ce projet avait pour objectif de créer une visualisation interactive de données sur l’évolution du nombre d’écoutes des albums et musiques du groupe Stray Kids. L’idée était de permettre aux visiteurs de comprendre rapidement et de manière visuelle comment la popularité des albums et des chansons a évolué dans le temps. Le site devait également proposer des informations complémentaires, et aussi de synthétiser les principaux constats réalisés à partir des données collectées par des API.",
-    "overview2": "Pour rendre la visualisation plus attractive, le site intègre de l’interactivité, des animations et des éléments multimédias comme: des images, des extraits audio des musiques et des mini extraits vidéos des clips du groupe. Les utilisateurs peuvent explorer les données, observer les tendances et comparer les chiffres des différents albums et chansons.",
-    "dates": "Septebmre à Novembre 2025 – BUT MMI2",
-    "skills": "Analyse de données, design UX, développement web, utilisation d’API (Deezer, Kworb contenant des données de statistiques)",
-    "software": "HTML, CSS, JavaScript, Chart.js",
-    "context": "Projet universitaire, réalisé en binôme, visant à créer un site web interactif pour suivre et visualiser les écoutes musicales.",
-    "link": "https://mmi-projets.github.io/Staytistics/",
-    "image": "images/Projets/SAE_303_-_Staytistics.webp"
-  },
-  {
     "id": 4,
     "title": "En Vadrouille",
     "tag": "Web",
@@ -102,19 +89,6 @@
     "context": "Projet universitaire réalisé en groupe, ayant pour objectif de comprendre et présenter le fonctionnement d’une rédaction d’information à travers une interview. L’expérience a permis de combiner travail technique, préparation en amont et communication avec un professionnel, tout en mettant en valeur les apprentissages liés à l’audiovisuel et à la langue anglaise.",
     "link": "https://youtu.be/clxwBRrWQ3I",
     "image": "images/Projets/SAE1.04_-_Interview.webp"
-  },
-  {
-    "id": 9,
-    "title": "Site WordPress - Art Science Factory - Projet Citoyen",
-    "tag": "Web",
-    "overview": "Ce projet collectif consistait à analyser et refondre la communication d’ArtScience Factory, une association qui promeut la recherche scientifique en lien avec l’art et l’innovation. Le travail portait sur l’audit des outils existants, l’étude des publics et la définition d’une direction artistique cohérente pour la communication digitale. L’objectif principal était de créer un site web clair, fonctionnel et moderne, permettant à l’association de diffuser ses événements et contenus de manière efficace et accessible.",
-    "overview2": "Le projet a été mené en équipe, ce qui a permis de répartir les tâches entre analyse, design et développement web. Nous avons réalisé la refonte complète du site sur WordPress, en configurant les rôles utilisateurs, en choisissant les extensions adaptées et en intégrant des éléments graphiques représentant l’univers scientifique et artistique de l’association. Ce travail nous a permis de développer des compétences en UX/UI, gestion de contenus, design graphique et travail collaboratif.",
-    "dates": "Janvier à Juin 2025 – BUT MMI1",
-    "skills": "Communication digitale, UX/UI, WordPress, gestion de contenu, design graphique, travail en équipe, gestion de projet.",
-    "software": "WordPress, Figma, Photoshop, Illustrator",
-    "context": "Projet réalisé en groupe avec pour objectif de moderniser la communication digitale d’une association culturelle et scientifique. Le projet impliquait la conception, le développement et l’optimisation d’un site web pour améliorer la visibilité, l’expérience utilisateur et la gestion des contenus, tout en respectant la direction artistique et l’identité de l’association.",
-    "link": "https://artsciencefactory.lin.projetsmmichamps.fr/",
-    "image": "images/Projets/SAE_2.02_-_Projet_Citoyen_-_Art_Science_Factory.webp"
   },
     {
     "id": 10,
